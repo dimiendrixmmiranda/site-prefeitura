@@ -1,0 +1,14 @@
+.carousel-item {
+    height: 35vh;
+}
+
+@media screen and (min-width: 768px){
+    .carousel-item{
+        height: 50vh;
+    }
+}
+@media screen and (min-width: 1024px){
+    .carousel-item{
+        height: 65vh;
+    }
+}

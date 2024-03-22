@@ -1,0 +1,131 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('./carrossel-noticias-principais.css');
+@import url('./menu-link.css');
+.navbar-nav {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav-item {
+    width: 50%;
+    flex-direction: row;
+    text-align: center;
+    max-width: 150px;
+    height: fit-content;
+}
+
+svg {
+    height: 100%;
+    width: 100%;
+}
+
+.link-logo {
+    display: flex;
+    position: relative;
+}
+
+.link-logo img {
+    height: 7vh;
+}
+
+.link-logo h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: .65em;
+    justify-content: center;
+    margin: 0;
+    margin-left: .5em;
+}
+
+.link-logo h1 strong {
+    font-size: 1.4em;
+}
+
+.dropdown-menu a {
+    white-space: wrap;
+}
+
+.dropdown-menu {
+    width: 140px;
+    --bs-dropdown-min-width: 4rem
+}
+
+.redes-sociais {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: .5em;
+    justify-content: center;
+}
+.redes-sociais li {
+    font-size: 1.5em;
+}
+@media screen and (min-width: 375px){
+    .navbar-brand h1{
+        font-size: .8em;
+    }
+}
+@media screen and (min-width: 425px){
+    .navbar-brand img{
+        height: 9vh;
+    }
+    .navbar-brand h1{
+        font-size: .9em;
+    }
+    .navbar-nav {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-item {
+       max-width: 120px;
+       width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .navbar-brand img{
+        height: 9vh;
+    }
+    .navbar-brand h1{
+        font-size: .9em;
+    }
+
+    .navbar-nav{
+        max-width: 410px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .nav-item{
+        max-width: 135px;
+    }
+}
+@media screen and (min-width: 992px){
+    .redes-sociais{
+        font-size: 1em;
+        width: 100px;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+    .redes-sociais li{
+        max-width: 50px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .navbar-nav{
+        max-width: none;
+        width: auto;
+        flex-wrap: nowrap;
+    }
+    .navbar-nav .nav-item{
+        max-width: 155px;
+        font-size: 1.2em;
+    }
+    .redes-sociais{
+        display: none;
+    }
+}

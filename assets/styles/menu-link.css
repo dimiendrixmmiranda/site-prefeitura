@@ -1,0 +1,101 @@
+.menu-link {
+    width: 98%;
+    height: 120px;
+    background-color: #F7F7F7;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.menu-link::-webkit-scrollbar {
+    height: 4px;
+}
+
+.menu-link::-webkit-scrollbar-track {
+    background: rgb(154, 248, 154);
+    /* color of the tracking area */
+}
+
+.menu-link::-webkit-scrollbar-thumb {
+    background-color: green;
+    /* color of the scroll thumb */
+    border-radius: 5px;
+    /* creates padding around scroll thumb */
+}
+
+
+.menu-link a {
+    width: 120px;
+    height: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-bottom: .05em;
+    margin: 0 .3em;
+}
+
+.portal-transparencia {
+    background-image: url('../imgs/portal-transparencia.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.processos-licitatorios {
+    background-image: url('../imgs/processos-licitatorios.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.atendimento-cidadao {
+    background-image: url('../imgs/atendimento-cidadao.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.protocolo-internet {
+    background-image: url('../imgs/protocolo-internet.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.declaracao-issqn {
+    background-image: url('../imgs/declaracao-issqn.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ouvidoria-municipal {
+    background-image: url('../imgs/ouvidoria-municipal.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.portal-nfs {
+    background-image: url('../imgs/portal-nfs.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* chegou em 885 vou por display flex e flex-grow = 1 */
+
+@media screen and (min-width: 885px) {
+    .menu-link{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        column-gap: .4em;
+        overflow: hidden;
+    }
+    .menu-link a{
+        flex-grow: 1;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .menu-link{
+        height: 140px;
+    }
+    .menu-link a{
+        width: 140px;
+        height: 100%;
+        flex-grow: 1;
+    }
+}
