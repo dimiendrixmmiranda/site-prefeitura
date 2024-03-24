@@ -1,0 +1,42 @@
+.carrossel-noticias-secundario{
+    height: 30vh;
+}
+
+.carrossel-noticias-secundario #carouselExampleCaptions {
+    height: 100%;
+}
+.carrossel-noticias-secundario .carousel-inner {
+    height: 100%;
+}
+.carrossel-noticias-secundario .carousel-item {
+    height: 100%;
+}
+
+.carrossel-noticias-secundario .carousel-caption {
+    padding: 0;
+    bottom: .15rem;
+}
+
+.carrossel-noticias-secundario .carousel-caption h5 {
+    font-size: 1.2em;
+}
+
+.carrossel-noticias-secundario .carousel-caption p {
+    font-size: .7em;
+}
+
+@media screen and (min-width: 375px){
+    .carrossel-noticias-secundario{
+        height: 35vh;
+    }
+}
+@media screen and (min-width: 425px){
+    .carrossel-noticias-secundario{
+        height: 40vh;
+    }
+}
+@media screen and (min-width: 576px){
+    .carrossel-noticias-secundario{
+        height: 45vh;
+    }
+}

@@ -1,6 +1,14 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url('./carrossel-noticias-principais.css');
 @import url('./menu-link.css');
+@import url('./main.css');
+@import url('./menu-mobile.css');
+@import url('./carrossel-noticias-secundario.css');
+@import url('./lista-noticias-cards.css');
+@import url('./galeria-de-obras.css');
+@import url('./aniversariantes.css');
+@import url('./servicos-municipais.css');
+
 .navbar-nav {
     flex-direction: row;
     width: 100%;

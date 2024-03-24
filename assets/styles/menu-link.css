@@ -1,11 +1,16 @@
+.menu{
+    height: 130px;
+    position: relative;
+}
 .menu-link {
     width: 98%;
-    height: 120px;
+    height: 100%;
     background-color: #F7F7F7;
     margin: 0 auto;
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
+    padding-bottom: .5em;
 }
 
 .menu-link::-webkit-scrollbar {
@@ -23,16 +28,13 @@
     border-radius: 5px;
     /* creates padding around scroll thumb */
 }
-
-
 .menu-link a {
     width: 120px;
     height: 100%;
     display: inline-block;
-    margin: 0;
-    padding: 0;
-    padding-bottom: .05em;
-    margin: 0 .3em;
+    margin: .2em;
+    padding: .5em;
+    /* box-shadow: 0 0 2px 1px black; */
 }
 
 .portal-transparencia {
