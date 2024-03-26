@@ -1,5 +1,8 @@
 .carrossel-noticias-secundario{
     height: 30vh;
+    width: 100%;
+    max-width: 950px;
+    justify-self: end;
 }
 
 .carrossel-noticias-secundario #carouselExampleCaptions {
@@ -38,5 +41,11 @@
 @media screen and (min-width: 576px){
     .carrossel-noticias-secundario{
         height: 45vh;
+    }
+}
+@media screen and (min-width: 992px){
+    .carrossel-noticias-secundario{
+        height: 65vh;
+        margin-right: 4em;
     }
 }

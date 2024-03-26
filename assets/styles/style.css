@@ -8,6 +8,9 @@
 @import url('./galeria-de-obras.css');
 @import url('./aniversariantes.css');
 @import url('./servicos-municipais.css');
+@import url('./rodape.css');
+@import url('./menu-offcanvas.css');
+@import url('./menu-lateral.css');
 
 .navbar-nav {
     flex-direction: row;
@@ -19,8 +22,12 @@
     width: 50%;
     flex-direction: row;
     text-align: center;
-    max-width: 150px;
+    max-width: 135px;
     height: fit-content;
+}
+
+.nav-item a{
+    padding: 4px;
 }
 
 svg {
@@ -55,7 +62,7 @@ svg {
 }
 
 .dropdown-menu {
-    width: 140px;
+    width: 135px;
     --bs-dropdown-min-width: 4rem
 }
 
@@ -64,11 +71,18 @@ svg {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    margin-top: .5em;
     justify-content: center;
+    flex-wrap: wrap;
+    max-width: 20px;
 }
 .redes-sociais li {
-    font-size: 1.5em;
+    width: 20px;
+    height: 20px;
+    font-size: 1em;
+}
+.redes-sociais li a{
+    margin: 0;
+    padding: 0;
 }
 @media screen and (min-width: 375px){
     .navbar-brand h1{
@@ -112,15 +126,13 @@ svg {
 }
 @media screen and (min-width: 992px){
     .redes-sociais{
-        font-size: 1em;
-        width: 100px;
-        flex-wrap: wrap;
-        display: flex;
-        flex-direction: row;
-        margin: 0;
+        max-width: none;
+        margin-left: auto;
     }
     .redes-sociais li{
-        max-width: 50px;
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
     }
 }
 @media screen and (min-width: 1200px){
@@ -132,8 +144,5 @@ svg {
     .navbar-nav .nav-item{
         max-width: 155px;
         font-size: 1.2em;
-    }
-    .redes-sociais{
-        display: none;
     }
 }

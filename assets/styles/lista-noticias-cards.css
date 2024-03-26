@@ -10,7 +10,7 @@
     align-items: center;
 }
 .lista-noticias-cards li{
-    max-width: 768px;
+    max-width: 934px;
     width: 100%;
 }
 
@@ -68,5 +68,13 @@
 @media screen and (min-width: 576px) {
     .lista-noticias-cards div {
         height: 160px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .lista-noticias-cards ul{
+        align-items: end;
+    }
+    .lista-noticias-cards ul li{
+        margin-right: 4em;
     }
 }

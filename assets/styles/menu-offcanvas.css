@@ -1,0 +1,97 @@
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+}
+
+.menu-informacoes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    font-size: 1.2em;
+}
+
+.menu-informacoes h3 {
+    grid-column: 1/3;
+    font-size: 1em;
+    text-align: center;
+    padding-bottom: .3em;
+}
+
+.menu-informacoes a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-informacoes>li {
+    padding: .5em 0;
+    text-align: center;
+}
+
+.menu-informacoes ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.menu-informacoes li:hover ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-informacoes li ul li {
+    font-size: .8em;
+    padding: .2em;
+}
+
+/* 2 */
+.menu-municipal {
+    /* background-color: red; */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-municipal ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-municipal h3 {
+    text-align: center;
+    font-size: 1.7em;
+    padding-bottom: .5em;
+}
+
+.menu-municipal a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-municipal li ul {
+    display: none;
+}
+
+.menu-municipal>li {
+    font-size: 1.2em;
+    padding: .2em 0;
+}
+
+.menu-municipal>li a {
+    display: flex;
+    align-items: center;
+    column-gap: .5em;
+}
+
+.menu-municipal>li a i {
+    font-size: .5em;
+    margin-top: .4em;
+}
+
+.offcanvas-body .redes-socias {
+    margin: 0;
+}
