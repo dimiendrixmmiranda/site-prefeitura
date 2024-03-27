@@ -1,7 +1,6 @@
 .conteudo-principal{
     height: fit-content;
     display: grid;
-    grid-template-rows: auto auto auto;
     grid-template-columns: 1fr;
 }
 
@@ -23,18 +22,12 @@
     grid-row: 4/5;
     grid-column: 1/3;
 }
+
 .galeria-de-obras{
     grid-row: 5/6;
     grid-column: 1/3;
 }
-.aniversariantes{
-    grid-row: 6/7;
-    grid-column: 1/3;
-}
-.servicos-municipais{
-    grid-row: 7/8;
-    grid-column: 1/3;
-}
+
 /* APLICAÇÃO DO SIDEBAR */
 .menu-lateral{
     grid-column: 1/2;
@@ -44,16 +37,36 @@
 @media screen and (min-width: 768px){
     .conteudo-principal{
         grid-template-columns: 30% 1fr;
+        grid-template-rows: auto auto 340px 550px auto auto auto;
     }
     .carrossel-noticias-secundario{
         grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .menu-lateral{
+        grid-row: 3/5;
     }
     .lista-noticias-cards{
         grid-column: 2/3;
+        grid-row: 4/6;
+    }
+    .galeria-de-obras{
+        grid-row: 6/7;
+    }
+    .servicos-municipais{
+        grid-row: 5/6;
+        grid-column: 1/2;
     }
 }
 @media screen and (min-width: 992px){
     .conteudo-principal{
         grid-template-columns: 25% 1fr;
+        grid-template-rows: auto auto 480px 440px auto auto auto;
+    }
+}
+@media screen and (min-width: 1200px){
+    .conteudo-principal{
+        grid-template-columns: 25% 1fr;
+        grid-template-rows: auto auto 530px 350px auto auto auto;
     }
 }

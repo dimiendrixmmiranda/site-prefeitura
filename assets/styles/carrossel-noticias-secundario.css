@@ -46,6 +46,11 @@
 @media screen and (min-width: 992px){
     .carrossel-noticias-secundario{
         height: 65vh;
-        margin-right: 4em;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .carrossel-noticias-secundario{
+        margin-right: 3em;
     }
 }

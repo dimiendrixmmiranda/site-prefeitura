@@ -1,8 +1,30 @@
-.servicos-municipais {
-    width: 95%;
-    margin: 0 auto;
+.servicos-municipais ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5em;
+    padding: .8em;
 }
 
-.servicos-municipais div {
-    height: 140px;
+.servicos-municipais ul li {
+    width: 85%;
+    max-width: 250px;
+}
+
+.servicos-municipais ul li img{
+    width: 100%;
+}
+
+@media screen and (min-width: 992px){
+    .servicos-municipais ul{
+        padding-left: 3em;
+        row-gap: 1em;
+    }
+    .servicos-municipais ul li{
+        width: 90%;
+    }
 }
