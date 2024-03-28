@@ -240,22 +240,14 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555"
-                                dy=".3em">First slide</text>
-                        </svg>
+                        <a href="#">
+                            <div id="img-1"></div>
+                        </a>
                     </div>
                     <div class="carousel-item">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444"
-                                dy=".3em">Second slide</text>
-                        </svg>
+                        <a href="#">
+                            <div id="img-2"></div>
+                        </a>
                     </div>
                     <div class="carousel-item">
                         <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
@@ -281,6 +273,8 @@
         </section>
         <!-- Menu -->
         <section class="mt-3 menu">
+            <button><i class="bi bi-arrow-left-circle-fill"></i></button>
+            <button><i class="bi bi-arrow-right-circle-fill"></i></button>
             <div class="menu-link">
                 <a href="#" class="portal-transparencia"></a>
                 <a href="#" class="processos-licitatorios"></a>
@@ -709,43 +703,39 @@
     </main>
 
     <footer class="m-0 mt-3 mt-xl-4 pb-1 rodape">
-        <h3 class="text-center px-1 py-3 px-sm-2 px-xl-3 py-xl-4">Horário de Atendimento: Segunda a Sexta, das 7:30h ás
-            11:30h, e das 13h
-            as 17h</h3>
-        <!-- <div>
-            <div class="rodape-logo m-0 p-0">
+        <h3 class="text-center px-1 py-3 m-0">
+            Horário de Atendimento: Segunda a Sexta, das 7:30h ás 11:30h, e das 13h as 17h
+        </h3>
+        <div>
+            <p class="text-center m-0 p-0 px-1 py-2 pt-md-3">
+                Rua:João Rodrigues de Almeida nº 387 - São Lucas - 86455-000 - JOAQUIM TAVORA - Paraná
+            </p>
+            <div class="p-0 m-0 px-2 rodape-contato">
+                <h2 class="p-0 m-0 pt-2 pb-1 ps-md-3 ps-xl-5 text-center">Entre em Contato</h2>
+                <ul class="px-md-2 px-md-4">
+                    <li>
+                        <span>Telefone:</span>
+                        <a href="#">(43) 3559-1122</a>
+                    </li>
+                    <li>
+                        <span>Ouvidoria:</span>
+                        <a href="#">0800 643 2560</a>
+                    </li>
+                    <li>
+                        <span>E-mail:</span>
+                        <a href="#">portaltransparencia@joaquimtavora.pr.gov.br</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="rodape-logo m-0 p-0 pt-2 pt-md-0">
                 <div>
                     <img src="./assets/imgs/logo-prefeitura.png" alt="Logo Prefeitura">
                 </div>
-                <h2>Prefeitura Municipal de <strong>Joaquim Távora - PR</strong></h2>
-            </div>
-            <p class="text-center py-2 px-2">
-                Rua:João Rodrigues de Almeida nº 387 - São Lucas - 86455-000 - JOAQUIM TAVORA - Paraná
-            </p>
-            <div class="mt-2 px-2 px-md-4 rodape-contato">
-                <div class="d-flex justify-content-start">
-                    <h4 class="d-block">Telefone:</h4>
-                    <a href="#" class="text-black d-block">
-                        <i class="bi bi-telephone-outbound"></i>
-                        (43) 3559-1122
-                    </a>
-                </div>
-                <div class="d-flex justify-content-start">
-                    <h4 class="d-block">Ouvidoria Geral:</h4>
-                    <a href="#" class="text-black">
-                        <i class="bi bi-megaphone-fill"></i>
-                        0800 643 2560
-                    </a>
-                </div>
-                <div class="d-flex justify-content-start">
-                    <h4 class="d-block">E-mail:</h4>
-                    <a href="#" class="text-black">
-                        <i class="bi bi-envelope-arrow-down-fill"></i>
-                        portaltransparencia@joaquimtavora.pr.gov.br
-                    </a>
+                <div>
+                    <h2 class="m-0 p-0">Prefeitura Municipal de <strong>Joaquim Távora - PR</strong></h2>
                 </div>
             </div>
-        </div> -->
+        </div>
     </footer>
 
     <!-- Off Canvas -->
@@ -817,6 +807,9 @@
                 </li>
                 <li>
                     <a href="#"><i class="bi bi-circle-fill"></i> Informe Postes de Iluminação Pública com Defeito</a>
+                </li>
+                <li>
+                    <a href="#"><i class="bi bi-circle-fill"></i> Coleta de Lixo</a>
                 </li>
                 <li>
                     <a><i class="bi bi-circle-fill"></i> Nossa Cidade</a>
@@ -932,7 +925,7 @@
                 </li>
             </ul>
 
-            <ul class="redes-sociais">
+            <ul class="m-0 p-0 redes-sociais-offcanvas">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-facebook"></i></a>
                 </li>
@@ -955,51 +948,3 @@
 </body>
 
 </html>
-
-<!-- Menu Mobile -->
-<!-- <section class="mt-3 menu-mobile">
-            <button class="btn btn-primary w-100" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <i class="bi bi-list"></i>
-            </button>
-
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-                aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu de Informações</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body p-0">
-                    <ul class="menu-lista">
-                        <li class="menu-lista-item"><a href="#">Informe Focos de Dengue!</a></li>
-                        <li class="menu-lista-item"><a>Corte e podas de Árvores</a></li>
-                        <li class="menu-lista-item"><a>Iluminação Pública</a></li>
-                        <li class="menu-lista-item">
-                            <a>Nossa Cidade</a>
-                            <ul class="menu-lista-submenu">
-                                <li>Aspectos Educacionais</li>
-                                <li>Aspectos Educacionais</li>
-                                <li>Aspectos Educacionais</li>
-                            </ul>
-                        </li>
-                        <li class="menu-lista-item"><a href="#">Legislação</a></li>
-                        <li class="menu-lista-item"><a href="#">Licitações</a></li>
-                        <li class="menu-lista-item"><a href="#">Galeria de Obras</a></li>
-                        <li class="menu-lista-item"><a href="#">Instituições de Ensino</a></li>
-                        <li class="menu-lista-item"><a href="#">Hospitais e Postos</a></li>
-                        <li class="menu-lista-item"><a href="#">Galeria de Prefeitos</a></li>
-                        <li class="menu-lista-item">
-                            <a>Departamentos</a>
-                            <ul class="menu-lista-submenu">
-                                <li>Aspectos Educacionais</li>
-                                <li>Aspectos Educacionais</li>
-                                <li>Aspectos Educacionais</li>
-                            </ul>
-                        </li>
-                        <li class="menu-lista-item"><a href="#">Galeria de Eventos</a></li>
-                        <li class="menu-lista-item"><a href="#">Portal de Obras</a></li>
-                        <li class="menu-lista-item"><a href="#">Informativo</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->

@@ -11,77 +11,128 @@
 .rodape > div{
     display: flex;
     flex-direction: column;
+    background-color: #236D45;
+    color: white;
 }
 
-.rodape .rodape-logo {
+.rodape-logo{
     display: grid;
-    width: 100%;
-    grid-template-columns: 18% 1fr;
-    padding: 0 .5em;
-    background-color: red;
+    grid-template-columns: auto 1fr;
 }
-.rodape .rodape-logo > div{
+.rodape-logo > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rodape-logo > div img{
+    width: 70px;
     padding: .5em;
 }
-
-.rodape .rodape-logo img {
-    grid-column: 1/2;
-    display: block;
+.rodape-logo h2{
+    font-size: 1.1em;
     width: 100%;
-    align-self: center;
+}
+.rodape-logo h2 strong{
+    font-size: 1.4em;
 }
 
-.rodape .rodape-logo h2 {
-    grid-column: 2/3;
+
+.rodape > div p{
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.rodape-contato{
     display: flex;
     flex-direction: column;
-    font-size: 1em;
-    align-self: center;
+}
+.rodape-contato ul{
+    align-self: flex-start;
+}
+.rodape-contato a{
+    text-decoration: none;
+    color: black;
+}
+.rodape-contato ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
-    margin-left: .3em;
 }
-
-.rodape div h2 strong {
-    font-size: 1.5em;
-}
-
-.rodape-contato h4 {
+.rodape-contato ul li{
+    width: 100%;
     font-size: 1.2em;
+}
+.rodape-contato ul li span{
+    font-weight: bold;
+}
+.rodape-contato ul li a{
+    font-weight: bold;
+    color: white;
+}
+.rodape-contato ul li:nth-child(3){
     white-space: nowrap;
-    margin: 0;
-    align-self: center;
+}
+.rodape-contato ul li:nth-child(3) a{
+    font-size: .58em;
 }
 
-.rodape-contato div a {
-    text-decoration: none;
-    margin-left: .4em;
-    font-size: 1em;
-    white-space: nowrap;
-}
-
-.rodape-contato div:nth-child(3) a {
-    font-size: .7em;
-    align-self: center;
-}
-
-@media screen and (min-width: 576px){
+@media screen and (min-width: 768px) {
     .rodape h3{
         font-size: 1.2em;
     }
-}
-@media screen and (min-width: 768px){
-    .rodape h3{
-        font-size: 1.4em;
+
+
+    .rodape > div{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+    .rodape > div p{
+        grid-column: 1/3;
+        grid-row: 2/3;
+        font-size: 1.2em;
+        max-width: 90%;
+        justify-self: center;
+    }
+    .rodape > div div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .rodape > div div h2{
+        display: flex;
+        width: 100%;
+    }
+    .rodape > div div ul li:nth-child(3) a{
+        font-size: .7em;
+    }
+    .rodape > div .rodape-logo{
+        display: grid;
+    }
+    .rodape > div .rodape-logo h2{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        width: 100%;
+        font-size: 1.35em;
+    }
+    .rodape > div .rodape-logo img{
+        width: 80px;
     }
 }
-@media screen and (min-width: 992px){
+
+@media screen and (min-width: 992px) {
     .rodape h3{
         font-size: 1.5em;
     }
-}
-@media screen and (min-width: 1200px){
-    .rodape h3{
-        font-size: 1.6em;
+    .rodape > div .rodape-logo img{
+        width: 100px;
+    }
+    .rodape > div .rodape-logo h2{
+        font-size: 1.7em;
     }
 }

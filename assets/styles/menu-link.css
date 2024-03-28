@@ -1,7 +1,27 @@
-.menu{
+.menu {
     height: 130px;
     position: relative;
 }
+
+.menu button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 1.2em;
+    border: none;
+    background-color: transparent;
+    color: green;
+    cursor: pointer;
+}
+
+.menu button:first-child {
+    left: 2%;
+}
+
+.menu button:nth-child(2){
+    right: 2%;
+}
+
 .menu-link {
     width: 98%;
     height: 100%;
@@ -28,6 +48,7 @@
     border-radius: 5px;
     /* creates padding around scroll thumb */
 }
+
 .menu-link a {
     width: 120px;
     height: 100%;
@@ -78,24 +99,32 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 /* chegou em 885 vou por display flex e flex-grow = 1 */
 
 @media screen and (min-width: 885px) {
-    .menu-link{
+    .menu-link {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         column-gap: .4em;
         overflow: hidden;
     }
-    .menu-link a{
+
+    .menu-link a {
         flex-grow: 1;
     }
+
+    .menu button{
+        display: none;
+    }
 }
+
 @media screen and (min-width: 1200px) {
-    .menu-link{
+    .menu-link {
         height: 140px;
     }
-    .menu-link a{
+
+    .menu-link a {
         width: 140px;
         height: 100%;
         flex-grow: 1;
