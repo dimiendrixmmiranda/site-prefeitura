@@ -13,6 +13,9 @@
     color: green;
     cursor: pointer;
 }
+.menu button i{
+    text-shadow: 0 0 2px black;
+}
 
 .menu button:first-child {
     left: 2%;

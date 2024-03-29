@@ -37,7 +37,7 @@
 @media screen and (min-width: 768px){
     .conteudo-principal{
         grid-template-columns: 30% 1fr;
-        grid-template-rows: auto auto 340px 550px auto auto auto;
+        grid-template-rows: auto auto 340px 590px auto auto auto;
     }
     .carrossel-noticias-secundario{
         grid-column: 2/3;
@@ -61,12 +61,12 @@
 @media screen and (min-width: 992px){
     .conteudo-principal{
         grid-template-columns: 25% 1fr;
-        grid-template-rows: auto auto 480px 440px auto auto auto;
+        grid-template-rows: auto auto 480px 450px auto auto auto;
     }
 }
 @media screen and (min-width: 1200px){
     .conteudo-principal{
         grid-template-columns: 25% 1fr;
-        grid-template-rows: auto auto 530px 350px auto auto auto;
+        grid-template-rows: auto auto 530px 400px auto auto auto;
     }
 }

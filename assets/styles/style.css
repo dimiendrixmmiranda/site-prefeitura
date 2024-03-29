@@ -12,6 +12,10 @@
 @import url('./menu-offcanvas.css');
 @import url('./menu-lateral.css');
 
+body{
+    background-color: #eeecec;
+}
+
 .navbar-nav {
     flex-direction: row;
     width: 100%;
@@ -74,6 +78,7 @@ svg {
     justify-content: center;
     flex-wrap: wrap;
     max-width: 20px;
+    margin-bottom: 12px;
 }
 .redes-sociais li {
     width: 20px;
@@ -124,15 +129,21 @@ svg {
         max-width: 135px;
     }
 }
-@media screen and (min-width: 992px){
+@media screen and (min-width: 870px){
     .redes-sociais{
         max-width: none;
+        column-gap: .3em;
         margin-left: auto;
     }
     .redes-sociais li{
         width: 30px;
         height: 30px;
-        font-size: 1.2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (min-width: 992px){
+    .redes-sociais{
+        margin-left: 0;
     }
 }
 @media screen and (min-width: 1200px){

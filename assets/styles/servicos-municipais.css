@@ -8,11 +8,13 @@
     flex-direction: column;
     row-gap: .5em;
     padding: .8em;
+    justify-content: center;
 }
 
 .servicos-municipais ul li {
     width: 85%;
-    max-width: 250px;
+    max-width: 170px;
+    align-self: center;
 }
 
 .servicos-municipais ul li img{
@@ -26,5 +28,10 @@
     }
     .servicos-municipais ul li{
         width: 90%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .servicos-municipais ul li {
+        max-width: 245px;
     }
 }

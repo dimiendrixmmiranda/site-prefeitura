@@ -2,8 +2,8 @@
     height: 40vh;
 }
 .carousel-item #img-1{
-    background-color: red;
-    background-image: url('../imgs/vacinacao.jpeg');
+    background-color: green;
+    /* background-image: url('../imgs/vacinacao.jpeg'); */
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -11,7 +11,7 @@
 }
 .carousel-item #img-2{
     background-color: red;
-    background-image: url('../imgs/iptu.jpeg');
+    /* background-image: url('../imgs/iptu.jpeg'); */
     background-position: center;
     background-size: cover;
     height: 100%;
