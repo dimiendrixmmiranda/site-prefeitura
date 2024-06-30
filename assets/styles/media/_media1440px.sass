@@ -1,0 +1,27 @@
+@import '../abstract/_variaveis'
+@media screen and ( min-width: 1440px )
+    .cabecalho
+        grid-template-columns: 300px 920px 40px
+        .cabecalho-link
+            grid-template-columns: 16% 1fr
+            white-space: nowrap
+            .cabecalho-link-container
+                img
+                    max-width: 45px
+                    p
+                        &:nth-child(1)
+                            font-size: 1em
+                        &:nth-child(2)
+                            font-size: 1.6em
+        .cabecalho-bars
+            display: none
+        .cabecalho-menu
+            margin-left: 1em
+            column-gap: .5em
+            .cabecalho-menu-item
+                a
+                    flex-direction: row
+                    column-gap: .4em
+                    font-size: 1em
+        .cabecalho-redes-mobile
+            display: none

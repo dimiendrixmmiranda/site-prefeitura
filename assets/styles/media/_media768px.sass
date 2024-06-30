@@ -1,0 +1,21 @@
+@import '../abstract/_variaveis'
+@media screen and ( min-width: 768px )
+    .cabecalho
+        grid-template-columns: auto 1fr 40px
+        .cabecalho-link
+            grid-template-columns: 16% 1fr
+            white-space: nowrap
+            .cabecalho-link-container
+                img
+                    max-width: 45px
+                    p
+                        &:nth-child(1)
+                            font-size: 1em
+                        &:nth-child(2)
+                            font-size: 1.6em
+        .cabecalho-bars
+            display: none
+        .cabecalho-menu
+            display: flex
+        .cabecalho-redes-mobile
+            display: flex

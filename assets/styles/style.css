@@ -1,159 +1,251 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-@import url('./carrossel-noticias-principais.css');
-@import url('./menu-link.css');
-@import url('./main.css');
-@import url('./menu-mobile.css');
-@import url('./carrossel-noticias-secundario.css');
-@import url('./lista-noticias-cards.css');
-@import url('./galeria-de-obras.css');
-@import url('./aniversariantes.css');
-@import url('./servicos-municipais.css');
-@import url('./rodape.css');
-@import url('./menu-offcanvas.css');
-@import url('./menu-lateral.css');
-
-body{
-    background-color: #eeecec;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar-nav {
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
+body {
+  min-height: 100vh;
 }
 
-.nav-item {
-    width: 50%;
-    flex-direction: row;
-    text-align: center;
-    max-width: 135px;
-    height: fit-content;
+.cabecalho {
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: 80% 1fr;
+  background-color: #0A6847;
+}
+.cabecalho .cabecalho-link {
+  font-family: "Lato", sans-serif;
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  text-decoration: none;
+  color: #fff;
+  -moz-column-gap: 0.5em;
+       column-gap: 0.5em;
+  text-shadow: 1px 1px 2px #000;
+}
+.cabecalho .cabecalho-link .cabecalho-link-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.cabecalho .cabecalho-link .cabecalho-link-container img {
+  max-width: 100%;
+  align-self: center;
+}
+.cabecalho .cabecalho-link .cabecalho-link-container p:nth-child(1) {
+  font-size: 0.75em;
+}
+.cabecalho .cabecalho-link .cabecalho-link-container p:nth-child(2) {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.cabecalho .cabecalho-bars {
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #075237;
+  border-radius: 4px;
+  border: none;
+}
+.cabecalho .cabecalho-bars:active {
+  background-color: #7ABA78;
+  border: solid 1px #fff;
+  transition: 0.3s ease;
+}
+.cabecalho .cabecalho-bars:hover {
+  background-color: #7ABA78;
+  border: solid 1px #fff;
+  transition: 0.6s ease;
+}
+.cabecalho .cabecalho-bars i {
+  text-shadow: 1px 1px 2px #000;
+}
+.cabecalho .cabecalho-menu {
+  grid-column: 2/3;
+  display: flex;
+  margin: 0.5em;
+  list-style: none;
+  -moz-column-gap: 0.2em;
+       column-gap: 0.2em;
+  font-family: "Roboto", sans-serif;
+  display: none;
+}
+.cabecalho .cabecalho-menu .cabecalho-menu-item {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  align-self: center;
+}
+.cabecalho .cabecalho-menu .cabecalho-menu-item a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  padding: 0 0.2em;
+  text-align: center;
+  background-color: #009846;
+  border-radius: 4px;
+}
+.cabecalho .cabecalho-menu .cabecalho-menu-item a i {
+  font-size: 0.6em;
+}
+.cabecalho .cabecalho-menu .cabecalho-menu-item a:hover {
+  background-color: #7ABA78;
+  text-shadow: 1px 1px 2px #000;
+  transition: 0.4s ease;
+}
+.cabecalho .cabecalho-redes-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.cabecalho .cabecalho-redes-mobile button {
+  width: 100%;
+  padding: 0.4em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #009846;
+  border-radius: 4px;
+  border: none;
+}
+.cabecalho .cabecalho-redes-mobile button img {
+  width: 30px;
 }
 
-.nav-item a{
-    padding: 4px;
-}
-
-svg {
-    height: 100%;
-    width: 100%;
-}
-
-.link-logo {
-    display: flex;
-    position: relative;
-}
-
-.link-logo img {
-    height: 7vh;
-}
-
-.link-logo h1 {
-    display: flex;
-    flex-direction: column;
-    font-size: .65em;
-    justify-content: center;
-    margin: 0;
-    margin-left: .5em;
-}
-
-.link-logo h1 strong {
+@media screen and (min-width: 375px) {
+  .cabecalho .cabecalho-link .cabecalho-link-container img {
+    max-width: 45px;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container p:nth-child(1) {
+    font-size: 0.9em;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container p:nth-child(2) {
     font-size: 1.4em;
+  }
 }
-
-.dropdown-menu a {
-    white-space: wrap;
-}
-
-.dropdown-menu {
-    width: 135px;
-    --bs-dropdown-min-width: 4rem
-}
-
-.redes-sociais {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 20px;
-    margin-bottom: 12px;
-}
-.redes-sociais li {
-    width: 20px;
-    height: 20px;
+@media screen and (min-width: 425px) {
+  .cabecalho .cabecalho-link {
+    grid-template-columns: 12% 1fr;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container img {
+    max-width: 45px;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container p:nth-child(1) {
     font-size: 1em;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container p:nth-child(2) {
+    font-size: 1.6em;
+  }
 }
-.redes-sociais li a{
-    margin: 0;
-    padding: 0;
+@media screen and (min-width: 768px) {
+  .cabecalho {
+    grid-template-columns: auto 1fr 40px;
+  }
+  .cabecalho .cabecalho-link {
+    grid-template-columns: 16% 1fr;
+    white-space: nowrap;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container img {
+    max-width: 45px;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container img p:nth-child(1) {
+    font-size: 1em;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container img p:nth-child(2) {
+    font-size: 1.6em;
+  }
+  .cabecalho .cabecalho-bars {
+    display: none;
+  }
+  .cabecalho .cabecalho-menu {
+    display: flex;
+  }
+  .cabecalho .cabecalho-redes-mobile {
+    display: flex;
+  }
 }
-@media screen and (min-width: 375px){
-    .navbar-brand h1{
-        font-size: .8em;
-    }
+@media screen and (min-width: 1024px) {
+  .cabecalho {
+    grid-template-columns: auto 1fr 40px;
+  }
+  .cabecalho .cabecalho-link {
+    grid-template-columns: 16% 1fr;
+    white-space: nowrap;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container img {
+    max-width: 45px;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container img p:nth-child(1) {
+    font-size: 1em;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container img p:nth-child(2) {
+    font-size: 1.6em;
+  }
+  .cabecalho .cabecalho-bars {
+    display: none;
+  }
+  .cabecalho .cabecalho-menu {
+    margin-left: 1em;
+  }
+  .cabecalho .cabecalho-menu .cabecalho-menu-item a {
+    flex-direction: row;
+    -moz-column-gap: 0.4em;
+         column-gap: 0.4em;
+    font-size: 0.9em;
+  }
 }
-@media screen and (min-width: 425px){
-    .navbar-brand img{
-        height: 9vh;
-    }
-    .navbar-brand h1{
-        font-size: .9em;
-    }
-    .navbar-nav {
-        flex-direction: row;
-        width: 100%;
-        justify-content: center;
-    }
-    .nav-item {
-       max-width: 120px;
-       width: 100%;
-    }
-}
-
-@media screen and (min-width: 768px){
-    .navbar-brand img{
-        height: 9vh;
-    }
-    .navbar-brand h1{
-        font-size: .9em;
-    }
-
-    .navbar-nav{
-        max-width: 410px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .nav-item{
-        max-width: 135px;
-    }
-}
-@media screen and (min-width: 870px){
-    .redes-sociais{
-        max-width: none;
-        column-gap: .3em;
-        margin-left: auto;
-    }
-    .redes-sociais li{
-        width: 30px;
-        height: 30px;
-        font-size: 1.5em;
-    }
-}
-@media screen and (min-width: 992px){
-    .redes-sociais{
-        margin-left: 0;
-    }
-}
-@media screen and (min-width: 1200px){
-    .navbar-nav{
-        max-width: none;
-        width: auto;
-        flex-wrap: nowrap;
-    }
-    .navbar-nav .nav-item{
-        max-width: 155px;
-        font-size: 1.2em;
-    }
-}
+@media screen and (min-width: 1440px) {
+  .cabecalho {
+    grid-template-columns: 300px 920px 40px;
+  }
+  .cabecalho .cabecalho-link {
+    grid-template-columns: 16% 1fr;
+    white-space: nowrap;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container img {
+    max-width: 45px;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container img p:nth-child(1) {
+    font-size: 1em;
+  }
+  .cabecalho .cabecalho-link .cabecalho-link-container img p:nth-child(2) {
+    font-size: 1.6em;
+  }
+  .cabecalho .cabecalho-bars {
+    display: none;
+  }
+  .cabecalho .cabecalho-menu {
+    margin-left: 1em;
+    -moz-column-gap: 0.5em;
+         column-gap: 0.5em;
+  }
+  .cabecalho .cabecalho-menu .cabecalho-menu-item a {
+    flex-direction: row;
+    -moz-column-gap: 0.4em;
+         column-gap: 0.4em;
+    font-size: 1em;
+  }
+  .cabecalho .cabecalho-redes-mobile {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

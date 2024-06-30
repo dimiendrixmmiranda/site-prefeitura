@@ -1,0 +1,14 @@
+@import '../abstract/_variaveis'
+
+@media screen and ( min-width: 425px )
+    .cabecalho
+        .cabecalho-link
+            grid-template-columns: 12% 1fr
+            .cabecalho-link-container
+                img
+                    max-width: 45px
+                p
+                    &:nth-child(1)
+                        font-size: 1em
+                    &:nth-child(2)
+                        font-size: 1.6em
