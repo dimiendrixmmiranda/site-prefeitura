@@ -1,9 +1,10 @@
 @import '../abstract/_variaveis'
 .cabecalho
-    padding: .5em
+    padding: .8em
     display: grid
     grid-template-columns: 80% 1fr
     background-color: $verde-1
+    border-bottom: solid 1px $preto
     .cabecalho-link
         font-family: $fonte-primaria
         display: grid
@@ -67,12 +68,13 @@
                 font-size: .8em
                 padding: 0 .2em
                 text-align: center
-                background-color: $verde-4
+                background-color: $verde-3
                 border-radius: 4px
                 i
                     font-size: .6em
                 &:hover
-                    background-color: $verde-3
+                    box-shadow: 0 0 1px 1px $preto
+                    background-color: $verde-4
                     text-shadow: 1px 1px 2px $preto
                     transition: .4s ease
     .cabecalho-redes-mobile
@@ -91,3 +93,135 @@
             border: none
             img
                 width: 30px
+    .cabecalho-redes
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        display: none
+        ul
+            display: flex
+            list-style: none
+            padding: .5em
+            column-gap: 1em
+            height: 100%
+            li
+                display: flex
+                align-items: flex-end
+                position: relative
+                .cabecalho-redes-item-link
+                    font-size: 1.6em
+                    color: $branco
+                    text-decoration: none
+                    &:hover
+                        animation: $animarBotaoRedesSocias
+                        margin-bottom: 5px
+                .facebook
+                    position: relative
+                    &::before
+                        content: 'Facebook'
+                        font-size: .4em
+                        position: absolute
+                        top: -70%
+                        left: -40%
+                        background-color: $branco
+                        color: $preto
+                        padding: .3em
+                        border-radius: 6px
+                        display: none
+                    &::after
+                        content: ''
+                        position: absolute
+                        width: 0
+                        height: 0
+                        top: -12%
+                        left: 35%
+                        border-left: 4px solid transparent
+                        border-right: 4px solid transparent
+                        border-top: 4px solid $branco
+                        display: none
+                    &:hover
+                        &::before, &::after
+                            display: block
+
+                .instagram
+                    position: relative
+                    &::before
+                        content: 'Instagram'
+                        font-size: .4em
+                        position: absolute
+                        top: -70%
+                        left: -55%
+                        background-color: $branco
+                        color: $preto
+                        padding: .3em
+                        border-radius: 6px
+                        display: none
+                    &::after
+                        content: ''
+                        position: absolute
+                        width: 0
+                        height: 0
+                        top: -12%
+                        left: 35%
+                        border-left: 4px solid transparent
+                        border-right: 4px solid transparent
+                        border-top: 4px solid $branco
+                        display: none
+                    &:hover
+                        &::before, &::after
+                            display: block
+                .email
+                    position: relative
+                    &::before
+                        content: 'Email'
+                        font-size: .4em
+                        position: absolute
+                        top: -70%
+                        left: -10%
+                        background-color: $branco
+                        color: $preto
+                        padding: .3em
+                        border-radius: 6px
+                        display: none
+                    &::after
+                        content: ''
+                        position: absolute
+                        width: 0
+                        height: 0
+                        top: -12%
+                        left: 35%
+                        border-left: 4px solid transparent
+                        border-right: 4px solid transparent
+                        border-top: 4px solid $branco
+                        display: none
+                    &:hover
+                        &::before, &::after
+                            display: block
+                .contato
+                    position: relative
+                    &::before
+                        content: 'Fale Conosco'
+                        white-space: nowrap
+                        font-size: .4em
+                        position: absolute
+                        top: -70%
+                        left: -75%
+                        background-color: $branco
+                        color: $preto
+                        padding: .3em
+                        border-radius: 6px
+                        display: none
+                    &::after
+                        content: ''
+                        position: absolute
+                        width: 0
+                        height: 0
+                        top: -12%
+                        left: 35%
+                        border-left: 4px solid transparent
+                        border-right: 4px solid transparent
+                        border-top: 4px solid $branco
+                        display: none
+                    &:hover
+                        &::before,&::after
+                            display: block

@@ -1,5 +1,14 @@
 @import '../styles/abstract/_reset.sass';
 @import '../styles/components/_cabecalho.sass';
+@import '../styles/components/_conteudoFuncionamento.sass';
+@import '../styles/components/_conteudoAvisosImportantes.sass';
+@import '../styles/components/_conteudoLinks.sass';
+@import '../styles/components/_conteudoNoticias.sass';
+@import '../styles/components/_conteudoOutrasNoticias.sass';
+@import '../styles/components/_conteudoBotaoVerMaisNoticias.sass';
+@import '../styles/components/_conteudoAniversariantes.sass';
+@import '../styles/components/_conteudoGaleriaDeObras.sass';
+@import '../styles/components/_rodape.sass';
 
 // medias
 @import '../styles/media/_media375px.sass';

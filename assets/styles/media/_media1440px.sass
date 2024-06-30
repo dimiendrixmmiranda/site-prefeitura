@@ -1,7 +1,7 @@
 @import '../abstract/_variaveis'
 @media screen and ( min-width: 1440px )
     .cabecalho
-        grid-template-columns: 300px 920px 40px
+        grid-template-columns: 300px 920px 1fr
         .cabecalho-link
             grid-template-columns: 16% 1fr
             white-space: nowrap
@@ -25,3 +25,51 @@
                     font-size: 1em
         .cabecalho-redes-mobile
             display: none
+        .cabecalho-redes
+            display: flex
+    .conteudo-avisosImportantes
+        height: 65vh
+    .conteudo-funcionamento
+        p
+            animation: none
+            left: 0
+            width: 100%
+            text-align: center
+            letter-spacing: 3.4px
+            font-size: .8em
+            margin-top: .2em
+    .conteudo-link
+        .conteudo-link-item
+            height: 150px
+            max-width: 170px
+    .conteudo-noticias
+        height: 60vh
+        width: 70%
+        margin: 3em 0 1em 0
+        margin-left: auto
+        margin-right: 1em
+    .conteudo-outrasNoticias
+        width: 70%
+        max-width: 70%
+        .conteudo-outrasNoticias-item
+            height: 210px
+            width: 100%
+    .conteudo-verMaisNoticias
+        max-width: 70%
+        margin-left: auto
+    .conteudo-galeriaDeObras
+        ul
+            background-color: $cinza-escuro
+            height: 220px
+    .rodape
+        .rodape-brasao
+            grid-template-columns: 12% 1fr 12%
+            div
+                &:nth-child(2)
+                    p
+                        &:nth-child(1)
+                            font-size: 2em
+                        &:nth-child(2)
+                            font-size: 3.4em
+                img
+                    max-width: 60%

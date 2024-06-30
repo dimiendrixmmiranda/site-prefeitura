@@ -19,3 +19,58 @@
             display: flex
         .cabecalho-redes-mobile
             display: flex
+    .conteudo-avisosImportantes
+        height: 50vh
+    .conteudo-funcionamento
+        p
+            animation: $movimentarFuncionamento3 16s ease-in-out infinite
+    .conteudo-link
+        .conteudo-link-item
+            width: 15%
+            height: 110px
+            background-color: $cinza-escuro
+    .conteudo-noticias
+        height: 40vh
+        width: 60%
+        margin: 1em 0
+        margin-left: auto
+        margin-right: 1em
+    .conteudo-outrasNoticias
+        display: flex
+        max-width: 60%
+        margin: 0
+        align-items: flex-end
+        margin-left: auto
+        margin-right: 1em
+        .conteudo-outrasNoticias-item
+            height: 120px
+            width: 100%
+            max-width: 100%
+            border-radius: 6px
+            background-color: $cinza-escuro
+    .conteudo-verMaisNoticias
+        max-width: 60%
+        margin-left: auto
+    .conteudo-galeriaDeObras
+        h3
+            font-size: 1.4em
+        ul
+            background-color: $cinza-escuro
+            height: 180px
+    .rodape
+        .rodape-informacoes
+            flex-direction: row
+            flex-wrap: wrap
+            gap: .5em
+            justify-content: center
+        .rodape-brasao
+            grid-template-columns: 15% 1fr 15%
+            div
+                &:nth-child(2)
+                    p
+                        &:nth-child(1)
+                            font-size: 1.4em
+                        &:nth-child(2)
+                            font-size: 2.4em
+                img
+                    max-width: 60%

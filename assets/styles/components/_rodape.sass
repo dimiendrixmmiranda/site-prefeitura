@@ -1,0 +1,40 @@
+@import '../abstract/_variaveis'
+.rodape
+    font-family: $fonte-secundaria
+    color: $branco
+    background-color: $verde-1
+    .rodape-informacoes
+        display: flex
+        flex-direction: column
+        row-gap: 1em
+        background-color: $verde-2
+        padding: .5em
+        p
+            text-align: center
+            a
+                text-decoration: none
+                cursor: pointer
+                color: $branco
+                font-size: .9em
+    .rodape-brasao
+        display: grid
+        grid-template-columns: 15% 1fr 15%
+        margin-top: 1em
+        padding: .5em
+        div
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            padding: .2em
+            &:nth-child(2)
+                align-items: flex-start
+            img
+                width: 100%
+                max-width: 40px
+            p
+                &:nth-child(1)
+                    font-size: .8em
+                &:nth-child(2)
+                    font-size: 1.4em
