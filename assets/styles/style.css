@@ -28,6 +28,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -150,31 +152,53 @@ button {
   width: 100%;
   display: flex;
   height: 100%;
-  align-self: center;
-}
-.cabecalho .cabecalho-menu .cabecalho-menu-item a {
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
   color: #fff;
+}
+.cabecalho .cabecalho-menu .cabecalho-menu-item:hover {
+  background-color: #075237;
+}
+.cabecalho .cabecalho-menu .cabecalho-menu-item p {
+  white-space: nowrap;
+  cursor: pointer;
+  display: flex;
+  -moz-column-gap: 0.4em;
+       column-gap: 0.4em;
+  justify-content: center;
+}
+.cabecalho .cabecalho-menu .cabecalho-menu-item .cabecalho-menu-item-submenu {
+  display: none;
+}
+.cabecalho .cabecalho-menu .cabecalho-menu-item:hover {
+  transition: 0.6s ease;
+  border-radius: 6px 6px 0 0;
+}
+.cabecalho .cabecalho-menu .cabecalho-menu-item:hover .cabecalho-menu-item-submenu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8em;
-  padding: 0 0.2em;
-  text-align: center;
+  position: absolute;
+  top: 100%;
+  list-style: none;
+  background-color: #075237;
+  z-index: 2;
+  row-gap: 0.2em;
+  padding-top: 0.4em;
+}
+.cabecalho .cabecalho-menu .cabecalho-menu-item:hover .cabecalho-menu-item-submenu li {
   background-color: #08553a;
-  border-radius: 4px;
+  padding: 0.2em;
 }
-.cabecalho .cabecalho-menu .cabecalho-menu-item a i {
-  font-size: 0.6em;
-}
-.cabecalho .cabecalho-menu .cabecalho-menu-item a:hover {
-  box-shadow: 0 0 1px 1px #000;
+.cabecalho .cabecalho-menu .cabecalho-menu-item:hover .cabecalho-menu-item-submenu li:hover {
   background-color: #519b81;
-  text-shadow: 1px 1px 2px #000;
   transition: 0.4s ease;
+}
+.cabecalho .cabecalho-menu .cabecalho-menu-item:hover .cabecalho-menu-item-submenu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9em;
+  cursor: pointer;
 }
 .cabecalho .cabecalho-redes-mobile {
   display: flex;
@@ -832,7 +856,6 @@ button {
 .rodape .rodape-brasao {
   display: grid;
   grid-template-columns: 15% 1fr 15%;
-  margin-top: 1em;
   padding: 0.5em;
 }
 .rodape .rodape-brasao div {
@@ -855,6 +878,314 @@ button {
 }
 .rodape .rodape-brasao div p:nth-child(2) {
   font-size: 1.4em;
+}
+
+@keyframes flutuar {
+  0% {
+    margin-bottom: 0;
+  }
+  100% {
+    margin-bottom: 5px;
+  }
+}
+@keyframes moviventarFuncionamento {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -350%;
+  }
+}
+@keyframes moviventarFuncionamento2 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -260%;
+  }
+}
+@keyframes moviventarFuncionamento3 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -145%;
+  }
+}
+@keyframes moviventarFuncionamento4 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -110%;
+  }
+}
+.offcanvas {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 80%;
+  height: 100%;
+  background-color: #08553a;
+  font-family: "Roboto", sans-serif;
+  display: none;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 80% 1fr;
+  grid-template-rows: 40px 1fr 50px auto;
+  padding: 0.5em;
+  gap: 0.5em;
+}
+.offcanvas .offcanvas-titulo {
+  font-size: 1.8em;
+  text-align: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.offcanvas .offcanvas-btn-fechar {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  font-size: 1.4em;
+  color: #fff;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offcanvas .offcanvas-btn-fechar:active {
+  background-color: #0A6847;
+  box-shadow: 0 0 2px 1px #000;
+  border-radius: 4px;
+}
+.offcanvas .offcanvas-menu {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  list-style: none;
+  row-gap: 0.4em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.offcanvas .offcanvas-menu .offcanvas-menu-item {
+  padding: 0.4em;
+  background-color: #0A6847;
+  border-radius: 4px;
+  display: flex;
+  font-size: 1.2em;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.offcanvas .offcanvas-menu .offcanvas-menu-item p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.offcanvas .offcanvas-menu .offcanvas-menu-item .submenu {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  row-gap: 0.2em;
+  margin-top: 0.5em;
+  z-index: 1;
+}
+.offcanvas .offcanvas-menu .offcanvas-menu-item .submenu li {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.offcanvas .offcanvas-menu .offcanvas-menu-item .submenu li a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.2em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  background-color: #075237;
+  width: 100%;
+}
+.offcanvas .offcanvas-localizacao {
+  grid-column: 1/3;
+  display: flex;
+  -moz-column-gap: 0.4em;
+       column-gap: 0.4em;
+  align-self: center;
+}
+.offcanvas .offcanvas-localizacao a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+.offcanvas .offcanvas-localizacao p {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+}
+.offcanvas .offcanvas-redesSociais {
+  list-style-type: none;
+  display: flex;
+  grid-column: 1/3;
+  justify-content: space-around;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .offcanvas-redesSociais-item-link {
+  font-size: 1.6em;
+  color: #fff;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .facebook {
+  position: relative;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .facebook::before {
+  content: "Facebook";
+  font-size: 0.4em;
+  position: absolute;
+  top: -70%;
+  left: -40%;
+  background-color: #fff;
+  color: #000;
+  padding: 0.3em;
+  border-radius: 6px;
+  display: none;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .facebook::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -12%;
+  left: 35%;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+  display: none;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .facebook:hover::before, .offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .facebook:hover::after {
+  display: block;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .instagram {
+  position: relative;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .instagram::before {
+  content: "Instagram";
+  font-size: 0.4em;
+  position: absolute;
+  top: -70%;
+  left: -55%;
+  background-color: #fff;
+  color: #000;
+  padding: 0.3em;
+  border-radius: 6px;
+  display: none;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .instagram::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -12%;
+  left: 35%;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+  display: none;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .instagram:hover::before, .offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .instagram:hover::after {
+  display: block;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .email {
+  position: relative;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .email::before {
+  content: "Email";
+  font-size: 0.4em;
+  position: absolute;
+  top: -70%;
+  left: -10%;
+  background-color: #fff;
+  color: #000;
+  padding: 0.3em;
+  border-radius: 6px;
+  display: none;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .email::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -12%;
+  left: 35%;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+  display: none;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .email:hover::before, .offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .email:hover::after {
+  display: block;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .contato {
+  position: relative;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .contato::before {
+  content: "Fale Conosco";
+  white-space: nowrap;
+  font-size: 0.4em;
+  position: absolute;
+  top: -70%;
+  left: -75%;
+  background-color: #fff;
+  color: #000;
+  padding: 0.3em;
+  border-radius: 6px;
+  display: none;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .contato::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -12%;
+  left: 35%;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+  display: none;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .contato:hover::before, .offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .contato:hover::after {
+  display: block;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .telefone {
+  position: relative;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .telefone::before {
+  content: "Telefone";
+  white-space: nowrap;
+  font-size: 0.4em;
+  position: absolute;
+  top: -70%;
+  left: -40%;
+  background-color: #fff;
+  color: #000;
+  padding: 0.3em;
+  border-radius: 6px;
+  display: none;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .telefone::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -12%;
+  left: 35%;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+  display: none;
+}
+.offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .telefone:hover::before, .offcanvas .offcanvas-redesSociais .offcanvas-redesSociais-item .telefone:hover::after {
+  display: block;
 }
 
 @keyframes flutuar {
