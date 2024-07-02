@@ -43,11 +43,41 @@
             height: 170px
             width: 100%
     .conteudo-aniversariantes
-        height: 170px
+        height: 160px
+        max-width: 60%
+        margin: 0
+        margin-left: auto
     .conteudo-galeriaDeObras
         h3
-            font-size: 1.6em
+            font-size: 2em
+        .conteudo-galeriaDeObras-btn
+            font-size: 4em
+        .conteudo-galeriaDeObras-lista
+            height: 190px
+            li
+                width: 220px
+                a
+                    width: 220px
+                    grid-template-rows: 1fr 45px
+                    .container-texto
+                        font-size: 1.1em
     .rodape
+        .rodape-informacoes
+            grid-template-columns: repeat(3, 1fr)
+            p
+                display: flex
+                align-items: center
+                &:nth-child(1)
+                    font-size: 1.6em
+                    grid-column: 1/4
+                    justify-self: center
+                &:nth-child(2)
+                    grid-column: 1/4
+                    font-size: 1.2em
+                    justify-self: center
+                &:nth-child(3),&:nth-child(4),&:nth-child(5)
+                    font-size: 1.2em
+                    justify-content: center
         .rodape-brasao
             grid-template-columns: 15% 1fr 15%
             div

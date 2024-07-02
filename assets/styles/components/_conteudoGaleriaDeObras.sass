@@ -3,10 +3,75 @@
     width: 100%
     margin: 1.5em auto
     max-width: 95%
+    position: relative
     h3
         font-family: $fonte-secundaria
         text-align: center
         margin-bottom: .4em
-    ul
-        background-color: $cinza-escuro
-        height: 120px
+    .conteudo-galeriaDeObras-btn
+        position: absolute
+        top: 50%
+        transform: translate(0,-20%)
+        font-size: 2.5em
+        background: transparent
+        border: none
+        color: $vermelho-escuro
+        i
+            text-shadow: 1px 1px 2px $preto
+    .right
+        right: 1%
+    .left
+        left: 1%
+    .conteudo-galeriaDeObras-lista
+        background-color: $cinza-claro
+        height: 140px
+        list-style: none
+        display: flex
+        overflow-x: scroll
+        padding: .2em .5em
+        column-gap: .5em
+        &::-webkit-scrollbar
+            height: 6px
+        &::-webkit-scrollbar-track
+            background: $vermelho-escuro
+        &::-webkit-scrollbar-thumb
+            border: solid 1px $preto
+            background-color: $branco
+        li
+            width: 170px
+            height: 100%
+            border-radius: 4px
+            a
+                width: 170px
+                height: 100%
+                display: grid
+                grid-template-rows: 1fr 30px
+                text-decoration: none
+                color: $branco
+                font-family: $fonte-secundaria
+                font-size: .7em
+                row-gap: .4em
+                .container-imagem
+                    width: 100%
+                    height: 100%
+                    overflow: hidden
+                    border-radius: 4px 4px 0 0
+                    img
+                        width: 100%
+                        height: 100%
+                .container-texto
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    justify-content: center
+                    text-align: center
+                    overflow-y: scroll
+                    padding: .2em
+                    color: $vermelho-escuro
+                    font-weight: bold
+                    &::-webkit-scrollbar
+                        width: 2px
+                    &::-webkit-scrollbar-track
+                        background: $vermelho-escuro
+                    &::-webkit-scrollbar-thumb
+                        background-color: $branco

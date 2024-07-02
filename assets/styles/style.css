@@ -730,11 +730,77 @@ button {
   }
 }
 .conteudo-aniversariantes {
-  width: 100%;
   height: 120px;
   background-color: #686D76;
   margin: 1em auto;
+  width: 95%;
+  list-style: none;
+  overflow: hidden;
+  position: relative;
+}
+.conteudo-aniversariantes .conteudo-aniversariantes-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 30px;
+  height: 30px;
+  font-size: 1.6em;
+  margin: 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+.conteudo-aniversariantes .right {
+  right: 0;
+}
+.conteudo-aniversariantes .conteudo-aniversariantes-lista {
+  white-space: nowrap;
+  height: 100%;
+}
+.conteudo-aniversariantes .conteudo-aniversariantes-lista li {
+  height: 100%;
+  display: inline-block;
+  padding: 0;
+}
+.conteudo-aniversariantes .conteudo-aniversariantes-lista li .conteudo-aniversariantes-item-container {
+  height: 100%;
+  width: 100%;
+  background-color: #075237;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  overflow: hidden;
+  -moz-column-gap: 0.4em;
+       column-gap: 0.4em;
+  color: #fff;
+}
+.conteudo-aniversariantes .conteudo-aniversariantes-lista li .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-imagem {
+  width: 100%;
+  align-self: center;
+}
+.conteudo-aniversariantes .conteudo-aniversariantes-lista li .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-imagem img {
+  width: 100%;
+  max-width: 115px;
+}
+.conteudo-aniversariantes .conteudo-aniversariantes-lista li .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos {
+  white-space: wrap;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3em;
+}
+.conteudo-aniversariantes .conteudo-aniversariantes-lista li .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos p {
   max-width: 95%;
+}
+.conteudo-aniversariantes .conteudo-aniversariantes-lista li .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos p:nth-child(1) {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.conteudo-aniversariantes .conteudo-aniversariantes-lista li .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos p:nth-child(2) {
+  font-size: 0.7em;
+}
+.conteudo-aniversariantes .conteudo-aniversariantes-lista li .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos p:nth-child(2) strong {
+  text-transform: uppercase;
 }
 
 @keyframes flutuar {
@@ -781,15 +847,96 @@ button {
   width: 100%;
   margin: 1.5em auto;
   max-width: 95%;
+  position: relative;
 }
 .conteudo-galeriaDeObras h3 {
   font-family: "Roboto", sans-serif;
   text-align: center;
   margin-bottom: 0.4em;
 }
-.conteudo-galeriaDeObras ul {
-  background-color: #686D76;
-  height: 120px;
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -20%);
+  font-size: 2.5em;
+  background: transparent;
+  border: none;
+  color: #971B1B;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-btn i {
+  text-shadow: 1px 1px 2px #000;
+}
+.conteudo-galeriaDeObras .right {
+  right: 1%;
+}
+.conteudo-galeriaDeObras .left {
+  left: 1%;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista {
+  background-color: #cdcecf;
+  height: 140px;
+  list-style: none;
+  display: flex;
+  overflow-x: scroll;
+  padding: 0.2em 0.5em;
+  -moz-column-gap: 0.5em;
+       column-gap: 0.5em;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista::-webkit-scrollbar {
+  height: 6px;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista::-webkit-scrollbar-track {
+  background: #971B1B;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista::-webkit-scrollbar-thumb {
+  border: solid 1px #000;
+  background-color: #fff;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li {
+  width: 170px;
+  height: 100%;
+  border-radius: 4px;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a {
+  width: 170px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 30px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7em;
+  row-gap: 0.4em;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-imagem {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-imagem img {
+  width: 100%;
+  height: 100%;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow-y: scroll;
+  padding: 0.2em;
+  color: #971B1B;
+  font-weight: bold;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto::-webkit-scrollbar {
+  width: 2px;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto::-webkit-scrollbar-track {
+  background: #971B1B;
+}
+.conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto::-webkit-scrollbar-thumb {
+  background-color: #fff;
 }
 
 @keyframes flutuar {
@@ -838,8 +985,7 @@ button {
   background-color: #0A6847;
 }
 .rodape .rodape-informacoes {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   row-gap: 1em;
   background-color: #075237;
   padding: 0.5em;
@@ -1310,7 +1456,7 @@ button {
     max-width: 500px;
   }
   .conteudo-aniversariantes {
-    height: 150px;
+    height: 140px;
   }
   .conteudo-galeriaDeObras ul {
     height: 150px;
@@ -1419,18 +1565,58 @@ button {
     max-width: 60%;
     margin-left: auto;
   }
-  .conteudo-galeriaDeObras h3 {
-    font-size: 1.4em;
+  .conteudo-aniversariantes {
+    height: 140px;
+    max-width: 60%;
+    margin: 0;
+    margin-left: auto;
   }
-  .conteudo-galeriaDeObras ul {
-    background-color: #686D76;
+  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item {
+    grid-template-columns: 125px 1fr;
+  }
+  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container {
+    padding: 0.5em;
+  }
+  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos:nth-child(2) {
+    font-size: 1.1em;
+  }
+  .conteudo-galeriaDeObras h3 {
+    font-size: 1.8em;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-btn {
+    font-size: 4em;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista {
     height: 180px;
   }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li {
+    width: 220px;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a {
+    width: 220px;
+    grid-template-rows: 1fr 45px;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto {
+    font-size: 1em;
+  }
   .rodape .rodape-informacoes {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.5em;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .rodape .rodape-informacoes p {
+    display: flex;
+    align-items: center;
+  }
+  .rodape .rodape-informacoes p:nth-child(1) {
+    font-size: 1.3em;
+    grid-column: 1/4;
+    justify-self: center;
+  }
+  .rodape .rodape-informacoes p:nth-child(2) {
+    grid-column: 1/4;
+    justify-self: center;
+  }
+  .rodape .rodape-informacoes p:nth-child(5) {
+    font-size: 0.7em;
   }
   .rodape .rodape-brasao {
     grid-template-columns: 15% 1fr 15%;
@@ -1538,10 +1724,50 @@ button {
     width: 100%;
   }
   .conteudo-aniversariantes {
-    height: 170px;
+    height: 160px;
+    max-width: 60%;
+    margin: 0;
+    margin-left: auto;
   }
   .conteudo-galeriaDeObras h3 {
+    font-size: 2em;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-btn {
+    font-size: 4em;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista {
+    height: 190px;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li {
+    width: 220px;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a {
+    width: 220px;
+    grid-template-rows: 1fr 45px;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto {
+    font-size: 1.1em;
+  }
+  .rodape .rodape-informacoes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .rodape .rodape-informacoes p {
+    display: flex;
+    align-items: center;
+  }
+  .rodape .rodape-informacoes p:nth-child(1) {
     font-size: 1.6em;
+    grid-column: 1/4;
+    justify-self: center;
+  }
+  .rodape .rodape-informacoes p:nth-child(2) {
+    grid-column: 1/4;
+    font-size: 1.2em;
+    justify-self: center;
+  }
+  .rodape .rodape-informacoes p:nth-child(3), .rodape .rodape-informacoes p:nth-child(4), .rodape .rodape-informacoes p:nth-child(5) {
+    font-size: 1.2em;
+    justify-content: center;
   }
   .rodape .rodape-brasao {
     grid-template-columns: 15% 1fr 15%;
@@ -1668,9 +1894,66 @@ button {
     max-width: 70%;
     margin-left: auto;
   }
-  .conteudo-galeriaDeObras ul {
-    background-color: #686D76;
-    height: 220px;
+  .conteudo-aniversariantes {
+    height: 180px;
+    max-width: 70%;
+  }
+  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item {
+    grid-template-columns: 160px 1fr;
+    padding: 0.5em;
+    -moz-column-gap: 1em;
+         column-gap: 1em;
+  }
+  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-imagem {
+    max-width: 100%;
+    width: 100%;
+  }
+  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-imagem img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-textos p:nth-child(1) {
+    font-size: 1.8em;
+  }
+  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-textos p:nth-child(2) {
+    font-size: 1.45em;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista {
+    height: 230px;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li {
+    width: 260px;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a {
+    width: 260px;
+    grid-template-rows: 1fr 45px;
+  }
+  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto {
+    font-size: 1.3em;
+  }
+  .rodape {
+    padding-bottom: 1.5em;
+  }
+  .rodape .rodape-informacoes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .rodape .rodape-informacoes p {
+    display: flex;
+    align-items: center;
+  }
+  .rodape .rodape-informacoes p:nth-child(1) {
+    font-size: 1.8em;
+    grid-column: 1/4;
+    justify-self: center;
+  }
+  .rodape .rodape-informacoes p:nth-child(2) {
+    grid-column: 1/4;
+    font-size: 1.4em;
+    justify-self: center;
+  }
+  .rodape .rodape-informacoes p:nth-child(3), .rodape .rodape-informacoes p:nth-child(4), .rodape .rodape-informacoes p:nth-child(5) {
+    font-size: 1.4em;
+    justify-content: center;
   }
   .rodape .rodape-brasao {
     grid-template-columns: 12% 1fr 12%;

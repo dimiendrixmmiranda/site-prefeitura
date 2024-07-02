@@ -51,18 +51,48 @@
     .conteudo-verMaisNoticias
         max-width: 60%
         margin-left: auto
+    .conteudo-aniversariantes
+        height: 140px
+        max-width: 60%
+        margin: 0
+        margin-left: auto
+        .conteudo-aniversariantes-lista
+            .conteudo-aniversariantes-item
+                grid-template-columns: 125px 1fr
+                .conteudo-aniversariantes-item-container
+                    padding: .5em
+                    .conteudo-aniversariantes-item-textos
+                        &:nth-child(2)
+                            font-size: 1.1em
     .conteudo-galeriaDeObras
         h3
-            font-size: 1.4em
-        ul
-            background-color: $cinza-escuro
+            font-size: 1.8em
+        .conteudo-galeriaDeObras-btn
+            font-size: 4em
+        .conteudo-galeriaDeObras-lista
             height: 180px
+            li
+                width: 220px
+                a
+                    width: 220px
+                    grid-template-rows: 1fr 45px
+                    .container-texto
+                        font-size: 1em
     .rodape
         .rodape-informacoes
-            flex-direction: row
-            flex-wrap: wrap
-            gap: .5em
-            justify-content: center
+            grid-template-columns: repeat(3, 1fr)
+            p
+                display: flex
+                align-items: center
+                &:nth-child(1)
+                    font-size: 1.3em
+                    grid-column: 1/4
+                    justify-self: center
+                &:nth-child(2)
+                    grid-column: 1/4
+                    justify-self: center
+                &:nth-child(5)
+                    font-size: .7em
         .rodape-brasao
             grid-template-columns: 15% 1fr 15%
             div
