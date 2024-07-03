@@ -1,7 +1,8 @@
 @import '../abstract/_variaveis'
 @media screen and ( min-width: 768px )
     .cabecalho
-        grid-template-columns: auto 1fr 40px
+        grid-template-columns: 300px 1fr 75px
+        width: 100%
         .cabecalho-link
             grid-template-columns: 16% 1fr
             white-space: nowrap
@@ -16,68 +17,108 @@
         .cabecalho-bars
             display: none
         .cabecalho-menu
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: .2em
+            .cabecalho-menu-item
+                p
+                    font-size: .9em
+                    padding: .4em 0
+                .cabecalho-menu-item-submenu
+                    li
+                        font-size: .8em
+        .cabecalho-redes
             display: flex
-        .cabecalho-redes-mobile
-            display: flex
-    .conteudo-avisosImportantes
-        height: 50vh
-    .conteudo-funcionamento
-        p
-            animation: $movimentarFuncionamento3 16s ease-in-out infinite
-    .conteudo-link
-        .conteudo-link-item
-            width: 15%
-            height: 110px
-            background-color: $cinza-escuro
-    .conteudo-noticias
-        height: 40vh
-        width: 60%
-        margin: 1em 0
-        margin-left: auto
-        margin-right: 1em
-    .conteudo-outrasNoticias
-        display: flex
-        max-width: 60%
-        margin: 0
-        align-items: flex-end
-        margin-left: auto
-        margin-right: 1em
-        .conteudo-outrasNoticias-item
-            height: 120px
+            ul
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+                li
+                    .cabecalho-redes-item-link
+                        font-size: 1.2em
+    .conteudo
+        display: grid
+        grid-template-columns: 35% 65%
+        width: 100%
+        .conteudo-funcionamento
+            grid-column: 1/3
+            p
+                animation: $movimentarFuncionamento3 16s ease-in-out infinite
+        .conteudo-avisosImportantes
+            grid-column: 1/3
+            height: 50vh
+        .conteudo-link
+            grid-column: 1/3
+            .conteudo-link-item
+                width: 15%
+                height: 110px
+                background-color: $cinza-escuro
+        .conteudo-sidebar
+            height: 100% 
+            width: 90%
+            background-color: red
+            grid-row: 4/8
+            margin-left: .5em
+        .conteudo-noticias
+            grid-column: 2/3
             width: 100%
-            max-width: 100%
-            border-radius: 6px
-            background-color: $cinza-escuro
-    .conteudo-verMaisNoticias
-        max-width: 60%
-        margin-left: auto
-    .conteudo-aniversariantes
-        height: 140px
-        max-width: 60%
-        margin: 0
-        margin-left: auto
-        .conteudo-aniversariantes-lista
-            .conteudo-aniversariantes-item
-                grid-template-columns: 125px 1fr
-                .conteudo-aniversariantes-item-container
-                    padding: .5em
-                    .conteudo-aniversariantes-item-textos
-                        &:nth-child(2)
-                            font-size: 1.1em
-    .conteudo-galeriaDeObras
-        h3
-            font-size: 1.8em
-        .conteudo-galeriaDeObras-btn
-            font-size: 4em
-        .conteudo-galeriaDeObras-lista
-            height: 180px
-            li
-                width: 220px
-                a
+            margin: 0
+        .conteudo-outrasNoticias
+            grid-column: 2/3
+            width: 100%
+            margin: 0
+            display: flex
+            align-items: flex-end
+            margin-top: 1.5em
+            .conteudo-outrasNoticias-item
+                height: 120px
+                width: 100%
+                max-width: 100%
+                border-radius: 6px
+                background-color: $cinza-escuro
+        .conteudo-verMaisNoticias
+            grid-row: 6/7
+            grid-column: 2/3
+        .conteudo-aniversariantes
+            grid-column: 2/3
+            width: 95%
+            height: 130px
+            .conteudo-aniversariantes-lista
+                .conteudo-aniversariantes-item
+                    grid-template-columns: 125px 1fr
+                    .conteudo-aniversariantes-item-container
+                        padding: .5em
+                        display: grid
+                        grid-template-columns: 25% 1fr
+                        .conteudo-aniversariantes-item-imagem
+                            overflow: hidden
+                            display: flex
+                            justify-content: center
+                            width: 100%
+                            img
+                                max-width: 90% 
+                        .conteudo-aniversariantes-item-textos
+                            p
+                                &:nth-child(1)
+                                    font-size: 1.4em
+                                &:nth-child(2)
+                                    font-size: .85em
+        .conteudo-galeriaDeObras
+            grid-column: 1/3
+            margin: 0 auto
+            margin-bottom: 1em
+            h3
+                font-size: 1.8em
+            .conteudo-galeriaDeObras-btn
+                font-size: 4em
+            .conteudo-galeriaDeObras-lista
+                height: 180px
+                li
                     width: 220px
-                    grid-template-rows: 1fr 45px
-                    .container-texto
-                        font-size: 1em
+                    a
+                        width: 220px
+                        grid-template-rows: 1fr 45px
+                        .container-texto
+                            font-size: 1em
     .rodape
         .rodape-informacoes
             grid-template-columns: repeat(3, 1fr)

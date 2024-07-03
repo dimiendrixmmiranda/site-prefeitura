@@ -30,6 +30,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -182,13 +184,15 @@ button {
   top: 100%;
   list-style: none;
   background-color: #075237;
-  z-index: 2;
+  z-index: 5;
   row-gap: 0.2em;
   padding-top: 0.4em;
+  width: 100%;
 }
 .cabecalho .cabecalho-menu .cabecalho-menu-item:hover .cabecalho-menu-item-submenu li {
   background-color: #08553a;
-  padding: 0.2em;
+  width: 100%;
+  height: 100%;
 }
 .cabecalho .cabecalho-menu .cabecalho-menu-item:hover .cabecalho-menu-item-submenu li:hover {
   background-color: #519b81;
@@ -199,25 +203,9 @@ button {
   color: #fff;
   font-size: 0.9em;
   cursor: pointer;
-}
-.cabecalho .cabecalho-redes-mobile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
-}
-.cabecalho .cabecalho-redes-mobile button {
   width: 100%;
-  padding: 0.4em 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #519b81;
-  border-radius: 4px;
-  border: none;
-}
-.cabecalho .cabecalho-redes-mobile button img {
-  width: 30px;
+  display: block;
+  padding: 0.2em;
 }
 .cabecalho .cabecalho-redes {
   display: flex;
@@ -232,16 +220,21 @@ button {
   -moz-column-gap: 1em;
        column-gap: 1em;
   height: 100%;
+  width: 100%;
 }
 .cabecalho .cabecalho-redes ul li {
   display: flex;
-  align-items: flex-end;
   position: relative;
+  width: 100%;
+  justify-content: center;
 }
 .cabecalho .cabecalho-redes ul li .cabecalho-redes-item-link {
   font-size: 1.6em;
   color: #fff;
   text-decoration: none;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
 }
 .cabecalho .cabecalho-redes ul li .cabecalho-redes-item-link:hover {
   animation: flutuar ease 0.6s;
@@ -409,8 +402,47 @@ button {
     left: -110%;
   }
 }
+@keyframes flutuar {
+  0% {
+    margin-bottom: 0;
+  }
+  100% {
+    margin-bottom: 5px;
+  }
+}
+@keyframes moviventarFuncionamento {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -350%;
+  }
+}
+@keyframes moviventarFuncionamento2 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -260%;
+  }
+}
+@keyframes moviventarFuncionamento3 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -145%;
+  }
+}
+@keyframes moviventarFuncionamento4 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -110%;
+  }
+}
 .conteudo-funcionamento {
-  width: 100%;
   background-color: #08553a;
   overflow: hidden;
   font-family: "Lato", sans-serif;
@@ -526,6 +558,10 @@ button {
   width: 30%;
   height: 80px;
   background-color: #686D76;
+}
+.conteudo-link .conteudo-link-item a {
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes flutuar {
@@ -1504,7 +1540,8 @@ button {
 }
 @media screen and (min-width: 768px) {
   .cabecalho {
-    grid-template-columns: auto 1fr 40px;
+    grid-template-columns: 300px 1fr 75px;
+    width: 100%;
   }
   .cabecalho .cabecalho-link {
     grid-template-columns: 16% 1fr;
@@ -1523,80 +1560,131 @@ button {
     display: none;
   }
   .cabecalho .cabecalho-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2em;
+  }
+  .cabecalho .cabecalho-menu .cabecalho-menu-item p {
+    font-size: 0.9em;
+    padding: 0.4em 0;
+  }
+  .cabecalho .cabecalho-menu .cabecalho-menu-item .cabecalho-menu-item-submenu li {
+    font-size: 0.8em;
+  }
+  .cabecalho .cabecalho-redes {
     display: flex;
   }
-  .cabecalho .cabecalho-redes-mobile {
-    display: flex;
+  .cabecalho .cabecalho-redes ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .conteudo-avisosImportantes {
-    height: 50vh;
+  .cabecalho .cabecalho-redes ul li .cabecalho-redes-item-link {
+    font-size: 1.2em;
   }
-  .conteudo-funcionamento p {
+  .conteudo {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    width: 100%;
+  }
+  .conteudo .conteudo-funcionamento {
+    grid-column: 1/3;
+  }
+  .conteudo .conteudo-funcionamento p {
     animation: moviventarFuncionamento3 16s ease-in-out infinite;
   }
-  .conteudo-link .conteudo-link-item {
+  .conteudo .conteudo-avisosImportantes {
+    grid-column: 1/3;
+    height: 50vh;
+  }
+  .conteudo .conteudo-link {
+    grid-column: 1/3;
+  }
+  .conteudo .conteudo-link .conteudo-link-item {
     width: 15%;
     height: 110px;
     background-color: #686D76;
   }
-  .conteudo-noticias {
-    height: 40vh;
-    width: 60%;
-    margin: 1em 0;
-    margin-left: auto;
-    margin-right: 1em;
+  .conteudo .conteudo-sidebar {
+    height: 100%;
+    width: 90%;
+    background-color: red;
+    grid-row: 4/8;
+    margin-left: 0.5em;
   }
-  .conteudo-outrasNoticias {
-    display: flex;
-    max-width: 60%;
+  .conteudo .conteudo-noticias {
+    grid-column: 2/3;
+    width: 100%;
     margin: 0;
-    align-items: flex-end;
-    margin-left: auto;
-    margin-right: 1em;
   }
-  .conteudo-outrasNoticias .conteudo-outrasNoticias-item {
+  .conteudo .conteudo-outrasNoticias {
+    grid-column: 2/3;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1.5em;
+  }
+  .conteudo .conteudo-outrasNoticias .conteudo-outrasNoticias-item {
     height: 120px;
     width: 100%;
     max-width: 100%;
     border-radius: 6px;
     background-color: #686D76;
   }
-  .conteudo-verMaisNoticias {
-    max-width: 60%;
-    margin-left: auto;
+  .conteudo .conteudo-verMaisNoticias {
+    grid-row: 6/7;
+    grid-column: 2/3;
   }
-  .conteudo-aniversariantes {
-    height: 140px;
-    max-width: 60%;
-    margin: 0;
-    margin-left: auto;
+  .conteudo .conteudo-aniversariantes {
+    grid-column: 2/3;
+    width: 95%;
+    height: 130px;
   }
-  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item {
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item {
     grid-template-columns: 125px 1fr;
   }
-  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container {
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container {
     padding: 0.5em;
+    display: grid;
+    grid-template-columns: 25% 1fr;
   }
-  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos:nth-child(2) {
-    font-size: 1.1em;
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-imagem {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
-  .conteudo-galeriaDeObras h3 {
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-imagem img {
+    max-width: 90%;
+  }
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos p:nth-child(1) {
+    font-size: 1.4em;
+  }
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos p:nth-child(2) {
+    font-size: 0.85em;
+  }
+  .conteudo .conteudo-galeriaDeObras {
+    grid-column: 1/3;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  .conteudo .conteudo-galeriaDeObras h3 {
     font-size: 1.8em;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-btn {
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-btn {
     font-size: 4em;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista {
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista {
     height: 180px;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li {
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li {
     width: 220px;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a {
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a {
     width: 220px;
     grid-template-rows: 1fr 45px;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto {
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto {
     font-size: 1em;
   }
   .rodape .rodape-informacoes {
@@ -1673,7 +1761,8 @@ button {
 }
 @media screen and (min-width: 1024px) {
   .cabecalho {
-    grid-template-columns: auto 1fr 40px;
+    grid-template-columns: 300px 1fr 75px;
+    width: 100%;
   }
   .cabecalho .cabecalho-link {
     grid-template-columns: 16% 1fr;
@@ -1692,61 +1781,136 @@ button {
     display: none;
   }
   .cabecalho .cabecalho-menu {
-    margin-left: 1em;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.2em;
   }
-  .cabecalho .cabecalho-menu .cabecalho-menu-item a {
-    flex-direction: row;
-    -moz-column-gap: 0.4em;
-         column-gap: 0.4em;
+  .cabecalho .cabecalho-menu .cabecalho-menu-item p {
     font-size: 0.9em;
+    padding: 0.4em 0;
   }
-  .conteudo-funcionamento p {
-    animation: moviventarFuncionamento4 14s ease-in-out infinite;
+  .cabecalho .cabecalho-menu .cabecalho-menu-item .cabecalho-menu-item-submenu li {
+    font-size: 0.8em;
   }
-  .conteudo-link {
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 1em auto;
+  .cabecalho .cabecalho-redes {
+    display: flex;
   }
-  .conteudo-link .conteudo-link-item {
-    height: 130px;
-    max-width: 150px;
+  .cabecalho .cabecalho-redes ul {
+    gap: 0.2em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .conteudo-noticias {
-    height: 50vh;
-    width: 60%;
-    margin: 1em 0;
-    margin-left: auto;
-    margin-right: 1em;
+  .cabecalho .cabecalho-redes ul li .cabecalho-redes-item-link {
+    font-size: 1.2em;
   }
-  .conteudo-outrasNoticias .conteudo-outrasNoticias-item {
-    height: 170px;
+  .conteudo {
+    display: grid;
+    grid-template-columns: 35% 65%;
     width: 100%;
   }
-  .conteudo-aniversariantes {
-    height: 160px;
-    max-width: 60%;
+  .conteudo .conteudo-funcionamento {
+    grid-column: 1/3;
+  }
+  .conteudo .conteudo-funcionamento p {
+    animation: moviventarFuncionamento3 16s ease-in-out infinite;
+  }
+  .conteudo .conteudo-avisosImportantes {
+    grid-column: 1/3;
+    height: 60vh;
+  }
+  .conteudo .conteudo-link {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .conteudo .conteudo-link .conteudo-link-item {
+    width: 130px;
+    height: 130px;
+    background-color: #686D76;
+    justify-self: center;
+  }
+  .conteudo .conteudo-sidebar {
+    height: 100%;
+    width: 90%;
+    background-color: red;
+    grid-row: 4/8;
+    margin-left: 0.5em;
+  }
+  .conteudo .conteudo-noticias {
+    grid-column: 2/3;
+    width: 100%;
     margin: 0;
-    margin-left: auto;
+    height: 45vh;
   }
-  .conteudo-galeriaDeObras h3 {
-    font-size: 2em;
+  .conteudo .conteudo-outrasNoticias {
+    grid-column: 2/3;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1.5em;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-btn {
+  .conteudo .conteudo-outrasNoticias .conteudo-outrasNoticias-item {
+    height: 150px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 6px;
+    background-color: #686D76;
+  }
+  .conteudo .conteudo-verMaisNoticias {
+    grid-row: 6/7;
+    grid-column: 2/3;
+  }
+  .conteudo .conteudo-aniversariantes {
+    grid-column: 2/3;
+    width: 95%;
+    height: 160px;
+  }
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item {
+    grid-template-columns: 125px 1fr;
+  }
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container {
+    padding: 0.5em;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+  }
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-imagem {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-imagem img {
+    max-width: 90%;
+  }
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos p:nth-child(1) {
+    font-size: 1.5em;
+  }
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos p:nth-child(2) {
+    font-size: 1.05em;
+  }
+  .conteudo .conteudo-galeriaDeObras {
+    grid-column: 1/3;
+    margin: 1em auto;
+  }
+  .conteudo .conteudo-galeriaDeObras h3 {
+    font-size: 1.8em;
+  }
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-btn {
     font-size: 4em;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista {
-    height: 190px;
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista {
+    height: 200px;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li {
-    width: 220px;
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li {
+    width: 260px;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a {
-    width: 220px;
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a {
+    width: 260px;
     grid-template-rows: 1fr 45px;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto {
-    font-size: 1.1em;
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto {
+    font-size: 1.2em;
   }
   .rodape .rodape-informacoes {
     grid-template-columns: repeat(3, 1fr);
@@ -1824,7 +1988,8 @@ button {
 }
 @media screen and (min-width: 1440px) {
   .cabecalho {
-    grid-template-columns: 300px 920px 1fr;
+    grid-template-columns: 350px 1fr 150px;
+    width: 100%;
   }
   .cabecalho .cabecalho-link {
     grid-template-columns: 16% 1fr;
@@ -1843,93 +2008,145 @@ button {
     display: none;
   }
   .cabecalho .cabecalho-menu {
-    margin-left: 1em;
-    -moz-column-gap: 0.5em;
-         column-gap: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.2em;
+    padding-left: 1em;
   }
-  .cabecalho .cabecalho-menu .cabecalho-menu-item a {
-    flex-direction: row;
-    -moz-column-gap: 0.4em;
-         column-gap: 0.4em;
-    font-size: 1em;
+  .cabecalho .cabecalho-menu .cabecalho-menu-item p {
+    font-size: 1.2em;
+    padding: 0.4em 0;
   }
-  .cabecalho .cabecalho-redes-mobile {
-    display: none;
+  .cabecalho .cabecalho-menu .cabecalho-menu-item .cabecalho-menu-item-submenu li {
+    font-size: 1.2em;
+    padding: 0 0.4em;
+    word-wrap: break-word;
   }
   .cabecalho .cabecalho-redes {
     display: flex;
   }
-  .conteudo-avisosImportantes {
-    height: 65vh;
+  .cabecalho .cabecalho-redes ul {
+    gap: 0.2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
-  .conteudo-funcionamento p {
-    animation: none;
+  .cabecalho .cabecalho-redes ul li .cabecalho-redes-item-link {
+    font-size: 1.4em;
+  }
+  .conteudo {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: auto;
+  }
+  .conteudo .conteudo-funcionamento {
+    grid-column: 1/3;
+  }
+  .conteudo .conteudo-funcionamento p {
     left: 0;
+    animation: none;
     width: 100%;
     text-align: center;
-    letter-spacing: 3.4px;
-    font-size: 0.8em;
-    margin-top: 0.2em;
+    font-size: 1em;
+    letter-spacing: 2px;
   }
-  .conteudo-link .conteudo-link-item {
-    height: 150px;
-    max-width: 170px;
-  }
-  .conteudo-noticias {
+  .conteudo .conteudo-avisosImportantes {
+    grid-column: 1/3;
     height: 60vh;
-    width: 70%;
-    margin: 3em 0 1em 0;
-    margin-left: auto;
-    margin-right: 1em;
   }
-  .conteudo-outrasNoticias {
-    width: 70%;
-    max-width: 70%;
+  .conteudo .conteudo-link {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
   }
-  .conteudo-outrasNoticias .conteudo-outrasNoticias-item {
-    height: 210px;
+  .conteudo .conteudo-link .conteudo-link-item {
     width: 100%;
+    height: 160px;
+    max-width: 75%;
+    background-color: #686D76;
+    justify-self: center;
   }
-  .conteudo-verMaisNoticias {
-    max-width: 70%;
-    margin-left: auto;
+  .conteudo .conteudo-sidebar {
+    height: 100%;
+    width: 90%;
+    background-color: red;
+    grid-row: 4/8;
+    margin-left: 0.5em;
   }
-  .conteudo-aniversariantes {
-    height: 180px;
-    max-width: 70%;
+  .conteudo .conteudo-noticias {
+    grid-column: 2/3;
+    width: 100%;
+    margin: 0;
+    height: 60vh;
   }
-  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item {
-    grid-template-columns: 160px 1fr;
+  .conteudo .conteudo-outrasNoticias {
+    grid-column: 2/3;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    margin-top: 1.5em;
+    row-gap: 1em;
+  }
+  .conteudo .conteudo-outrasNoticias .conteudo-outrasNoticias-item {
+    height: 200px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 6px;
+    background-color: #686D76;
+  }
+  .conteudo .conteudo-verMaisNoticias {
+    grid-row: 6/7;
+    grid-column: 2/3;
+  }
+  .conteudo .conteudo-aniversariantes {
+    grid-column: 2/3;
+    width: 95%;
+    height: 220px;
+  }
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item {
+    grid-template-columns: 125px 1fr;
+  }
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container {
     padding: 0.5em;
-    -moz-column-gap: 1em;
-         column-gap: 1em;
+    display: grid;
+    grid-template-columns: 25% 1fr;
   }
-  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-imagem {
-    max-width: 100%;
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-imagem {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
-  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-imagem img {
-    width: 100%;
-    max-width: 100%;
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-imagem img {
+    max-width: 90%;
   }
-  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-textos p:nth-child(1) {
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos p:nth-child(1) {
+    font-size: 2.2em;
+  }
+  .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-container .conteudo-aniversariantes-item-textos p:nth-child(2) {
+    font-size: 1.4em;
+  }
+  .conteudo .conteudo-galeriaDeObras {
+    grid-column: 1/3;
+    margin: 1em auto;
+  }
+  .conteudo .conteudo-galeriaDeObras h3 {
     font-size: 1.8em;
   }
-  .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item .conteudo-aniversariantes-item-textos p:nth-child(2) {
-    font-size: 1.45em;
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-btn {
+    font-size: 4em;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista {
-    height: 230px;
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista {
+    height: 240px;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li {
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li {
     width: 260px;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a {
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a {
     width: 260px;
     grid-template-rows: 1fr 45px;
   }
-  .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto {
-    font-size: 1.3em;
+  .conteudo .conteudo-galeriaDeObras .conteudo-galeriaDeObras-lista li a .container-texto {
+    font-size: 1.4em;
   }
   .rodape {
     padding-bottom: 1.5em;
