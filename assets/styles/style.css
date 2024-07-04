@@ -32,6 +32,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@keyframes flutuar {
+  0% {
+    margin-bottom: 0;
+  }
+  100% {
+    margin-bottom: 5px;
+  }
+}
+@keyframes moviventarFuncionamento {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -350%;
+  }
+}
+@keyframes moviventarFuncionamento2 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -260%;
+  }
+}
+@keyframes moviventarFuncionamento3 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -145%;
+  }
+}
+@keyframes moviventarFuncionamento4 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -110%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +84,7 @@
 
 body {
   min-height: 100vh;
+  background-color: #cdcecf;
 }
 
 button {
@@ -558,10 +603,116 @@ button {
   width: 30%;
   height: 80px;
   background-color: #686D76;
+  box-shadow: 0 0 2px 1px #000;
 }
 .conteudo-link .conteudo-link-item a {
   width: 100%;
   height: 100%;
+}
+.conteudo-link .conteudo-link-item a img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes flutuar {
+  0% {
+    margin-bottom: 0;
+  }
+  100% {
+    margin-bottom: 5px;
+  }
+}
+@keyframes moviventarFuncionamento {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -350%;
+  }
+}
+@keyframes moviventarFuncionamento2 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -260%;
+  }
+}
+@keyframes moviventarFuncionamento3 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -145%;
+  }
+}
+@keyframes moviventarFuncionamento4 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -110%;
+  }
+}
+.conteudo-sidebar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2em;
+  margin-top: 2em;
+  display: none;
+}
+.conteudo-sidebar .conteudo-sidebar-item {
+  background-color: #08553a;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  font-size: 1.2em;
+  font-family: "Lato", sans-serif;
+  padding: 0.5em 0;
+  position: relative;
+  cursor: pointer;
+}
+.conteudo-sidebar .conteudo-sidebar-item i {
+  align-self: center;
+  justify-self: center;
+  font-size: 0.8em;
+}
+.conteudo-sidebar .conteudo-sidebar-item p a {
+  text-decoration: none;
+  color: #fff;
+}
+.conteudo-sidebar .conteudo-sidebar-item ul {
+  display: none;
+}
+.conteudo-sidebar .conteudo-sidebar-item:hover {
+  background-color: #0A6847;
+}
+.conteudo-sidebar .conteudo-sidebar-item:hover ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 200px;
+}
+.conteudo-sidebar .conteudo-sidebar-item:hover ul li {
+  display: flex;
+  height: 42px;
+  background-color: #0A6847;
+  border: solid 1px #000;
+}
+.conteudo-sidebar .conteudo-sidebar-item:hover ul li a {
+  text-decoration: none;
+  height: 100%;
+  color: #fff;
+  font-size: 0.8em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 0.4em;
+}
+.conteudo-sidebar .conteudo-sidebar-item:hover ul li a:hover {
+  background-color: #519b81;
 }
 
 @keyframes flutuar {
@@ -609,7 +760,7 @@ button {
   width: 100%;
   background-color: #686D76;
   max-width: 95%;
-  margin: 1em auto;
+  margin: 2em auto 1em auto;
 }
 
 @keyframes flutuar {
@@ -1607,14 +1758,15 @@ button {
   .conteudo .conteudo-sidebar {
     height: 100%;
     width: 90%;
-    background-color: red;
     grid-row: 4/8;
     margin-left: 0.5em;
+    display: flex;
   }
   .conteudo .conteudo-noticias {
     grid-column: 2/3;
     width: 100%;
     margin: 0;
+    margin-top: 2em;
   }
   .conteudo .conteudo-outrasNoticias {
     grid-column: 2/3;
@@ -1639,6 +1791,7 @@ button {
     grid-column: 2/3;
     width: 95%;
     height: 130px;
+    margin-right: 2em;
   }
   .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item {
     grid-template-columns: 125px 1fr;
@@ -1831,15 +1984,14 @@ button {
   }
   .conteudo .conteudo-sidebar {
     height: 100%;
-    width: 90%;
-    background-color: red;
+    width: 75%;
     grid-row: 4/8;
     margin-left: 0.5em;
+    justify-content: space-between;
   }
   .conteudo .conteudo-noticias {
     grid-column: 2/3;
     width: 100%;
-    margin: 0;
     height: 45vh;
   }
   .conteudo .conteudo-outrasNoticias {
@@ -2014,7 +2166,7 @@ button {
     padding-left: 1em;
   }
   .cabecalho .cabecalho-menu .cabecalho-menu-item p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     padding: 0.4em 0;
   }
   .cabecalho .cabecalho-menu .cabecalho-menu-item .cabecalho-menu-item-submenu li {
@@ -2067,15 +2219,24 @@ button {
   }
   .conteudo .conteudo-sidebar {
     height: 100%;
-    width: 90%;
-    background-color: red;
+    width: 70%;
     grid-row: 4/8;
     margin-left: 0.5em;
+    justify-content: start;
+    row-gap: 0.5em;
+  }
+  .conteudo .conteudo-sidebar .conteudo-sidebar-item:hover ul {
+    width: 300px;
+  }
+  .conteudo .conteudo-sidebar .conteudo-sidebar-item:hover ul li {
+    height: 42px;
+  }
+  .conteudo .conteudo-sidebar .conteudo-sidebar-item:hover ul li a {
+    font-size: 0.9em;
   }
   .conteudo .conteudo-noticias {
     grid-column: 2/3;
     width: 100%;
-    margin: 0;
     height: 60vh;
   }
   .conteudo .conteudo-outrasNoticias {
@@ -2101,6 +2262,7 @@ button {
     grid-column: 2/3;
     width: 95%;
     height: 220px;
+    margin-right: 3em;
   }
   .conteudo .conteudo-aniversariantes .conteudo-aniversariantes-lista .conteudo-aniversariantes-item {
     grid-template-columns: 125px 1fr;

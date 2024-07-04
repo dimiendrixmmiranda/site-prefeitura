@@ -1,0 +1,52 @@
+@import '../abstract/_variaveis'
+.conteudo-sidebar
+    display: flex
+    flex-direction: column
+    row-gap: .2em
+    margin-top: 2em
+    display: none
+    .conteudo-sidebar-item
+        background-color: $verde-3
+        color: $branco
+        display: grid
+        grid-template-columns: 15% 1fr
+        font-size: 1.2em
+        font-family: $fonte-primaria
+        padding: .5em 0
+        position: relative
+        cursor: pointer
+        i
+            align-self: center
+            justify-self: center
+            font-size: .8em
+        p
+            a
+                text-decoration: none
+                color: $branco
+        ul
+            display: none
+        &:hover
+            background-color: $verde-1
+            ul
+                display: flex
+                flex-direction: column
+                position: absolute
+                top: 0
+                left: 100%
+                width: 200px
+                li
+                    display: flex
+                    height: 42px
+                    background-color: $verde-1
+                    border: solid 1px $preto
+                    a
+                        text-decoration: none
+                        height: 100%
+                        color: $branco
+                        font-size: .8em
+                        width: 100%
+                        display: flex
+                        align-items: center
+                        padding: 0 .4em
+                        &:hover
+                            background-color: $verde-4

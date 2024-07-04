@@ -23,7 +23,7 @@
             padding-left: 1em
             .cabecalho-menu-item
                 p
-                    font-size: 1.2em
+                    font-size: 1.1em
                     padding: .4em 0
                 .cabecalho-menu-item-submenu
                     li
@@ -67,14 +67,22 @@
                 justify-self: center 
         .conteudo-sidebar
             height: 100%
-            width: 90%
-            background-color: red
+            width: 70%
             grid-row: 4/8
             margin-left: .5em
+            justify-content: start
+            row-gap: .5em
+            .conteudo-sidebar-item
+                &:hover
+                    ul 
+                        width: 300px
+                        li
+                            height: 42px
+                            a
+                                font-size: .9em
         .conteudo-noticias
             grid-column: 2/3
             width: 100%
-            margin: 0
             height: 60vh
         .conteudo-outrasNoticias
             grid-column: 2/3
@@ -96,6 +104,7 @@
             grid-column: 2/3
             width: 95%
             height: 220px
+            margin-right: 3em
             .conteudo-aniversariantes-lista
                 .conteudo-aniversariantes-item
                     grid-template-columns: 125px 1fr
