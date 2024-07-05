@@ -3,4 +3,36 @@
 .conteudo-avisosImportantes
     background-color: $cinza-escuro
     width: 100%
-    height: 40vh
+    height: 30vh
+    .container-slider
+        width: 100%
+        height: 100%
+        background-color: red
+        position: relative
+        .btn-right
+            position: absolute
+            top: 50%
+            right: 1%
+        .btn-left
+            position: absolute
+            top: 50%
+            left: .5%
+        .btn-left, .btn-right
+            font-size: 2em
+            transform: translate(0, -50%)
+            background: transparent
+            border: none
+        .container-slider-imagens
+            width: 100%
+            height: 100%
+            list-style: none
+            overflow: hidden
+            white-space: nowrap
+            li
+                width: 100%
+                height: 100%
+                background-repeat: no-repeat
+                background-position: center
+                background-size: contain
+                display: inline-flex
+                transition: .6s ease

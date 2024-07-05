@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prefeitura Municipal de Joaquim Távora - PR</title>
-    <link rel="shortcut icon" href="./assets/imgs/logo-prefeitura.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/imgs/faveicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -197,10 +197,18 @@
     </header>
     <main class="conteudo">
         <div class="conteudo-funcionamento">
-            <p>Endereço: Rua João Rodrigues de Almeida nº 387 - São Lucas, CEP: 86455-000. Horário de atendimento:
-                Segunda a Sexta, das 7h30 as 11h30 e das 13h as 17h.</p>
+            <p>
+                Endereço: Rua João Rodrigues de Almeida nº 387 - São Lucas, CEP: 86455-000. Horário de atendimento:
+                Segunda a Sexta, das 7h30 as 11h30 e das 13h as 17h.
+            </p>
         </div>
-        <div class="conteudo-avisosImportantes"></div>
+        <div class="conteudo-avisosImportantes">
+            <div class="container-slider">
+                <button class="btn-right"><i class="fa-solid fa-chevron-right"></i></button>
+                <button class="btn-left"><i class="fa-solid fa-chevron-left"></i></button>
+                <ul class="container-slider-imagens"></ul>
+            </div>
+        </div>
         <ul class="conteudo-link">
             <li class="conteudo-link-item">
                 <a href="#"><img src="./assets/imgs/portal-transparencia.png" alt=""></a>
@@ -396,7 +404,7 @@
                 <i class="fa-solid fa-circle"></i>
                 <p><a href="#">Plano Diretor</a></p>
             </li>
-            
+
         </ul>
         <div class="conteudo-noticias"></div>
         <ul class="conteudo-outrasNoticias">
@@ -416,7 +424,7 @@
         <div class="conteudo-verMaisNoticias">
             <button>Ver Mais <i class="fa-solid fa-circle-down"></i></button>
         </div>
-        <div class="conteudo-aniversariantes">
+        <div class="conteudo-aniversariantes" id="aniversariantes">
             <button class="conteudo-aniversariantes-btn right"><i class="fa-solid fa-chevron-right"></i></button>
             <button class="conteudo-aniversariantes-btn left"><i class="fa-solid fa-chevron-left"></i></button>
             <ul class="conteudo-aniversariantes-lista">
@@ -428,7 +436,9 @@
                         <div class="conteudo-aniversariantes-item-textos">
                             <p> Feliz aniversário!</p>
                             <p>
-                                A prefeitura de Joaquim Távora parabenebiza o servidor <strong>Cristiano Ronaldo MartinsJunior</strong> pelo seu aniverário! Agradecemos pelo seu trabalho e dedicação. Que seu dia seja repleto de alegria e sucesso!
+                                A prefeitura de Joaquim Távora parabenebiza o servidor <strong>Cristiano Ronaldo
+                                    MartinsJunior</strong> pelo seu aniverário! Agradecemos pelo seu trabalho e
+                                dedicação. Que seu dia seja repleto de alegria e sucesso!
                             </p>
                         </div>
                     </div>
@@ -441,7 +451,24 @@
                         <div class="conteudo-aniversariantes-item-textos">
                             <p> Feliz aniversário!</p>
                             <p>
-                                A prefeitura de Joaquim Távora parabenebiza o servidor <strong>Cristiano Ronaldo MartinsJunior</strong> pelo seu aniverário! Agradecemos pelo seu trabalho e dedicação. Que seu dia seja repleto de alegria e sucesso!
+                                A prefeitura de Joaquim Távora parabenebiza o servidor <strong>Cristianaaao Ronaldo
+                                    MartinsJunior</strong> pelo seu aniverário! Agradecemos pelo seu trabalho e
+                                dedicação. Que seu dia seja repleto de alegria e sucesso!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="conteudo-aniversariantes-item">
+                    <div class="conteudo-aniversariantes-item-container">
+                        <div class="conteudo-aniversariantes-item-imagem">
+                            <img src="./assets/imgs/avatar-mulher.png" alt="">
+                        </div>
+                        <div class="conteudo-aniversariantes-item-textos">
+                            <p> Feliz aniversário!</p>
+                            <p>
+                                A prefeitura de Joaquim Távora parabenebiza o servidor <strong>Cristiano Ronaldo
+                                    MartinsJunior</strong> pelo seu aniverário! Agradecemos pelo seu trabalho e
+                                dedicação. Que seu dia seja repleto de alegria e sucesso!
                             </p>
                         </div>
                     </div>
@@ -2104,7 +2131,6 @@
             </div>
         </div>
     </footer>
-
     <div class="offcanvas" id="offcanvas">
         <h2 class="offcanvas-titulo">Menu</h2>
         <button type="button" class="offcanvas-btn-fechar" id="fecharOffcanvas">
@@ -2202,6 +2228,12 @@
                         <a href="#">Coleta de Lixo</a>
                     </li>
                     <li>
+                        <a href="#">Solicitar Corte ou Poda de Árvores</a>
+                    </li>
+                    <li>
+                        <a href="#">Operação Tapa Buracos</a>
+                    </li>
+                    <li>
                         <a href="#">Concursos</a>
                     </li>
                     <li>
@@ -2282,5 +2314,8 @@
 
     <script src="./script/offcanvas.js"></script>
     <script src="./script/galeriaObras.js"></script>
+    <script src="./script/aniversariantes.js"></script>
+    <script type="module" src="./script/criarSliderAvisosImportantes.js"></script>
 </body>
+
 </html>
