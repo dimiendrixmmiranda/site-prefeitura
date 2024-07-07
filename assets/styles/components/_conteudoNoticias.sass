@@ -5,3 +5,48 @@
     background-color: $cinza-escuro
     max-width: 95%
     margin: 2em auto 1em auto
+    display: flex
+    flex-direction: column
+    position: relative
+    .btn-right
+        right: 1%
+    .btn-left
+        left: 1%
+    .btn-right, .btn-left
+        z-index: 10
+        top: 50%
+        position: absolute
+        transform: translate(0, -50%)
+        font-size: 2em
+        background: transparent
+        border: none
+    .conteudo-noticias-lista
+        white-space: nowrap
+        height: 100%
+        .conteudo-noticias-lista-item
+            width: 100%
+            height: 100%
+            background-color: red
+            display: block
+            overflow: hidden
+            position: relative
+            font-family: $fonte-primaria
+            .imagem
+                width: 100%
+                height: 100%
+                background-image: url('https://i.ytimg.com/vi/oWK9Px9k8vo/maxresdefault.jpg')
+                background-size: cover
+            .textos
+                display: flex
+                flex-direction: column
+                background: $verde-1
+                color: $branco
+                padding: .2em
+                position: absolute
+                bottom: 0
+                white-space: wrap
+                .titulo-noticia
+                    padding-bottom: .2em
+                    p
+                        font-size: 1em
+                        font-weight: bold

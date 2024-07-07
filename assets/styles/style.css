@@ -802,6 +802,60 @@ button {
   background-color: #686D76;
   max-width: 95%;
   margin: 2em auto 1em auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.conteudo-noticias .btn-right {
+  right: 1%;
+}
+.conteudo-noticias .btn-left {
+  left: 1%;
+}
+.conteudo-noticias .btn-right, .conteudo-noticias .btn-left {
+  z-index: 10;
+  top: 50%;
+  position: absolute;
+  transform: translate(0, -50%);
+  font-size: 2em;
+  background: transparent;
+  border: none;
+}
+.conteudo-noticias .conteudo-noticias-lista {
+  white-space: nowrap;
+  height: 100%;
+}
+.conteudo-noticias .conteudo-noticias-lista .conteudo-noticias-lista-item {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  font-family: "Lato", sans-serif;
+}
+.conteudo-noticias .conteudo-noticias-lista .conteudo-noticias-lista-item .imagem {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.ytimg.com/vi/oWK9Px9k8vo/maxresdefault.jpg");
+  background-size: cover;
+}
+.conteudo-noticias .conteudo-noticias-lista .conteudo-noticias-lista-item .textos {
+  display: flex;
+  flex-direction: column;
+  background: #0A6847;
+  color: #fff;
+  padding: 0.2em;
+  position: absolute;
+  bottom: 0;
+  white-space: wrap;
+}
+.conteudo-noticias .conteudo-noticias-lista .conteudo-noticias-lista-item .textos .titulo-noticia {
+  padding-bottom: 0.2em;
+}
+.conteudo-noticias .conteudo-noticias-lista .conteudo-noticias-lista-item .textos .titulo-noticia p {
+  font-size: 1em;
+  font-weight: bold;
 }
 
 @keyframes flutuar {
@@ -2015,7 +2069,7 @@ button {
   .conteudo .conteudo-link {
     grid-column: 1/3;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     background-color: #F7F7F7;
     padding: 0.5em;
   }
