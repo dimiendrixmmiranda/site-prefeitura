@@ -58,13 +58,25 @@
         .conteudo-link
             grid-column: 1/3
             display: grid
-            grid-template-columns: repeat(6, 1fr)
+            background-color: $branco-2
+            padding: .5em
             .conteudo-link-item
+                justify-self: center
+                box-shadow: none
                 width: 100%
-                height: 160px
-                max-width: 75%
-                background-color: $cinza-escuro
-                justify-self: center 
+                height: 100%
+                display: flex
+                a
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    &:hover
+                        border: solid 1px $verde-2
+                        scale: 1.1
+                        transition: .6s ease
+                    img
+                        height: 100%
+                        width: auto
         .conteudo-sidebar
             height: 100%
             width: 70%
@@ -74,7 +86,7 @@
             row-gap: .5em
             .conteudo-sidebar-item
                 &:hover
-                    ul 
+                    ul
                         width: 300px
                         li
                             height: 42px
@@ -118,7 +130,7 @@
                             justify-content: center
                             width: 100%
                             img
-                                max-width: 90% 
+                                max-width: 90%
                         .conteudo-aniversariantes-item-textos
                             p
                                 &:nth-child(1)

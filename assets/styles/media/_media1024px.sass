@@ -50,12 +50,14 @@
         .conteudo-link
             grid-column: 1/3
             display: grid
-            grid-template-columns: repeat(6, 1fr)
+            grid-template-columns: repeat(7, 1fr)
+            background-color: $branco-2
+            padding: .5em
             .conteudo-link-item
-                width: 130px
-                height: 130px
-                background-color: $cinza-escuro
+                width: 150px
+                height: 150px
                 justify-self: center
+                box-shadow: none
         .conteudo-sidebar
             height: 100%
             width: 75%
@@ -99,7 +101,7 @@
                             justify-content: center
                             width: 100%
                             img
-                                max-width: 90% 
+                                max-width: 90%
                         .conteudo-aniversariantes-item-textos
                             p
                                 &:nth-child(1)
