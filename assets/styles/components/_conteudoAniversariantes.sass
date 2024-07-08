@@ -7,55 +7,59 @@
     list-style: none
     overflow: hidden
     position: relative
-    .conteudo-aniversariantes-btn
+    font-family: $fonte-primaria
+    .right, .left
         position: absolute
         top: 50%
         transform: translate(0, -50%)
-        width: 30px
-        height: 30px
-        font-size: 1.6em
-        margin: 0
+        font-size: 1.5em
         background: transparent
         border: none
         color: $branco
+        text-shadow: 1px 1px 2px $preto
     .right
-        right: 0
+        right: 1%
+    .left
+        left: 1%
     .conteudo-aniversariantes-lista
         white-space: nowrap
         height: 100%
-        // overflow-x: scroll
-        li
+        .conteudo-aniversariantes-lista-item-semAniversariantes
+            font-size: 1.5em
+            white-space: wrap
+            line-height: 1
             height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+        .conteudo-aniversariantes-lista-item
             display: inline-block
-            padding: 0
-            .conteudo-aniversariantes-item-container
+            width: 100%
+            height: 100%
+            white-space: wrap
+            transition: .6s ease
+            .container
+                display: grid
+                grid-template-columns: 40% 1fr
                 height: 100%
                 width: 100%
-                background-color: $verde-2
-                display: grid
-                grid-template-columns: 30% 1fr
-                overflow: hidden
-                column-gap: .4em
+                background-color: $verde-1
                 color: $branco
-                .conteudo-aniversariantes-item-imagem
-                    width: 100%
-                    align-self: center
-                    img
-                        width: 100%
-                        max-width: 115px
-                .conteudo-aniversariantes-item-textos
-                    white-space: wrap
-                    font-family: $fonte-secundaria
+                .conteudo-aniversariantes-lista-item-imagem
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: contain
+                    height: 100%
+                    display: flex
+                .conteudo-aniversariantes-lista-item-textos
+                    height: 100%
                     display: flex
                     flex-direction: column
-                    row-gap: .3em
+                    padding: .4em
                     p
-                        max-width: 95%
                         &:nth-child(1)
-                            text-align: center
-                            font-weight: bold
                             font-size: 1.2em
+                            font-weight: bold
+                            text-align: center
                         &:nth-child(2)
                             font-size: .7em
-                            strong
-                                text-transform: uppercase

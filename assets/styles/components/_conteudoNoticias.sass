@@ -20,22 +20,29 @@
         font-size: 2em
         background: transparent
         border: none
+        color: $branco
+        text-shadow: 1px 1px 2px $preto
     .conteudo-noticias-lista
         white-space: nowrap
         height: 100%
+        overflow: hidden
         .conteudo-noticias-lista-item
             width: 100%
             height: 100%
             background-color: red
-            display: block
+            display: inline-block
             overflow: hidden
             position: relative
             font-family: $fonte-primaria
+            transition: .6s ease
             .imagem
                 width: 100%
                 height: 100%
                 background-image: url('https://i.ytimg.com/vi/oWK9Px9k8vo/maxresdefault.jpg')
-                background-size: cover
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center
+                transition: .6s ease
             .textos
                 display: flex
                 flex-direction: column
@@ -45,8 +52,8 @@
                 position: absolute
                 bottom: 0
                 white-space: wrap
-                .titulo-noticia
-                    padding-bottom: .2em
-                    p
-                        font-size: 1em
-                        font-weight: bold
+                width: 100%
+                p
+                    font-size: 1em
+                    font-weight: bold
+                    text-align: center

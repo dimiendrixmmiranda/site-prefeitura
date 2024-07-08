@@ -1,9 +1,9 @@
-export const avisosImportantes = []
+export const listaAvisosImportantes = []
 
 function adicionarNovoAvisoImportante (titulo, enderecoDaImagem){
-    avisosImportantes.push({
+    listaAvisosImportantes.unshift({
         titulo: titulo,
-        enderecoDaImagem: enderecoDaImagem
+        enderecoDaImagem: enderecoDaImagem // futuramente vai ser um objeto para cada tamanho de tela vai ter uma imagem
     })
 }
 

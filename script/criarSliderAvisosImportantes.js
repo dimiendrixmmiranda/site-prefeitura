@@ -1,22 +1,17 @@
-import { avisosImportantes } from "./dados/avisosImportantes.js";
+import { criarElementoSlider } from "./criarElementoSlider.js";
+import { listaAvisosImportantes } from "./dados/listaAvisosImportantes.js";
 const elementoListaDeAvisosImportantes = document.querySelector('.container-slider-imagens')
-
-avisosImportantes.forEach(aviso => {
-    const li = document.createElement('li')
-
-    // no dados avisos importantes vai ter um objeto com a imagem para cada tamanho de tala, vamos fazer a verificação aq
-    console.log(window.innerWidth)
-    
-    li.setAttribute('style', `background-image: url(${aviso.enderecoDaImagem});`)
-    elementoListaDeAvisosImportantes.appendChild(li)
-})
-
 const btnRight = document.querySelector('.btn-right')
 const btnLeft = document.querySelector('.btn-left')
+listaAvisosImportantes.forEach(aviso => {
+    const li = criarElementoSlider(aviso.enderecoDaImagem)  
+    elementoListaDeAvisosImportantes.appendChild(li)
+})
 const lis = document.querySelectorAll('.container-slider-imagens li')
-let margem = 0
 const quantidadeDeImagens = lis.length
+let margem = 0
 lis[0].style.marginLeft = `${margem}`
+
 
 btnRight.addEventListener('click', (e) => {
     e.preventDefault()
